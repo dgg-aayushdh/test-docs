@@ -1,0 +1,62 @@
+site_name: TPO
+nav:
+    - Home: index.md
+    - Overview: overview.md
+    - Setup: 
+      - Summary: setup/summary.md
+      - Local Installation: setup/local-installation.md
+      - Local Build: setup/local-build.md
+      - Cloud Deployment: setup/cloud-deployment.md
+      - Local Development: setup/local-development.md
+    - Usage:
+        - TPO Command Line Interface: usage/cli.md
+        - Configuration:
+            - Overview: usage/configuration/overview.md
+            - Settings: usage/configuration/settings-file.md
+            - Genome-Support: usage/configuration/genome-support.md
+            - BCL-Barcodes: usage/configuration/bcl-barcodes.md
+        - Tasks:
+            - Overview: usage/tasks/overview.md
+            - Analysis Tasks: usage/tasks/analysis-tasks.md
+            - Development Tasks: usage/tasks/development-tasks.md
+        - Pipelines: 
+            - Overview: usage/pipelines/overview.md
+            - OncoSeq: usage/pipelines/onco-seq.md
+            - WGS+WES: usage/pipelines/wgs-wes.md
+            - Shallow WGS: usage/pipelines/shallow-wgs.md
+        - R Packages: 
+            - Overview: usage/r-packages/overview.md
+            - tpolib: usage/r-packages/tpolib.md
+            - codac: usage/r-packages/codac.md
+            - cnvex: usage/r-packages/cnvex.md
+            - carat: usage/r-packages/carat.md
+            - caniq: usage/r-packages/caniq.md
+        - Shiny Apps:
+            - Overview: usage/shiny-apps/overview.md
+            - curve: usage/shiny-apps/curve.md
+            - cnvex-viewer: usage/shiny-apps/cnvex-viewer.md
+            - structural-viewer: usage/shiny-apps/structural-viewer.md
+    - Output:
+        - Somatic Variants: output/somatic-variants.md
+        - Silos and Vaults: output/silos-and-vaults.md
+    - Development: 
+        - Architecture: development/architecture.md
+        - Debugging: development/debugging.md
+        - Repository: development/repository.md
+        - Updating References: development/updating-references.md
+        - Updating Ensembl: development/updating-ensembl.md
+        - Updating Panel-of-Normals: development/updating-panel-of-normals.md
+        - Unit Testing: development/unit-testing.md
+        - Adding Tasks: development/adding-tasks.md
+        - Adding Capture Panel: development/adding-capture-panel.md
+        - Use TPO in Local Mode: development/use-tpo-in-local-mode.md
+    - Notes:
+        - Overview: notes/overview.md
+        - circos: notes/circos.md
+        - Examples: notes/examples.md
+        - Misc: notes/misc.md
+        - Integrative Analysis: notes/integrative-analysis.md
+        - Use Cases: notes/use-cases.md
+        - Variant & Feature Manual Review: notes/variant-and-feature-manual-review.md
+
+user_color_mode_toggle: true
