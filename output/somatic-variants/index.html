@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Somatic Variants - TPO</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">TPO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../overview/" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setup</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../setup/summary/" class="dropdown-item">Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-installation/" class="dropdown-item">Local Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-build/" class="dropdown-item">Local Build</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/cloud-deployment/" class="dropdown-item">Cloud Deployment</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-development/" class="dropdown-item">Local Development</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/cli/" class="dropdown-item">TPO Command Line Interface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/configuration/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/settings-file/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/genome-support/" class="dropdown-item">Genome-Support</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/bcl-barcodes/" class="dropdown-item">BCL-Barcodes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tasks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/tasks/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/analysis-tasks/" class="dropdown-item">Analysis Tasks</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/development-tasks/" class="dropdown-item">Development Tasks</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pipelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/pipelines/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">R Packages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/r-packages/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/tpolib/" class="dropdown-item">tpolib</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/codac/" class="dropdown-item">codac</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/cnvex/" class="dropdown-item">cnvex</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/carat/" class="dropdown-item">carat</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/caniq/" class="dropdown-item">caniq</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Shiny Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/shiny-apps/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/curve/" class="dropdown-item">curve</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Output</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Somatic Variants</a>
+</li>
+                                    
+<li>
+    <a href="../silos-and-vaults/" class="dropdown-item">Silos and Vaults</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/architecture/" class="dropdown-item">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../development/debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../../development/repository/" class="dropdown-item">Repository</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-references/" class="dropdown-item">Updating References</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-ensembl/" class="dropdown-item">Updating Ensembl</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-panel-of-normals/" class="dropdown-item">Updating Panel-of-Normals</a>
+</li>
+                                    
+<li>
+    <a href="../../development/unit-testing/" class="dropdown-item">Unit Testing</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-tasks/" class="dropdown-item">Adding Tasks</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-capture-panel/" class="dropdown-item">Adding Capture Panel</a>
+</li>
+                                    
+<li>
+    <a href="../../development/use-tpo-in-local-mode/" class="dropdown-item">Use TPO in Local Mode</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Notes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../notes/overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/circos/" class="dropdown-item">circos</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/examples/" class="dropdown-item">Examples</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/misc/" class="dropdown-item">Misc</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/integrative-analysis/" class="dropdown-item">Integrative Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/use-cases/" class="dropdown-item">Use Cases</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/variant-and-feature-manual-review/" class="dropdown-item">Variant & Feature Manual Review</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../usage/shiny-apps/cnvex-viewer/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../silos-and-vaults/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#somatic-variants" class="nav-link">Somatic Variants</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="somatic-variants">Somatic Variants</h2>
+<p>The somatic variants appear in the vault under <code>v$tables$somatic</code> and contain the following fields</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>triage</td>
+<td>character</td>
+<td>??</td>
+</tr>
+<tr>
+<td>id</td>
+<td>character</td>
+<td>name of analysis (from cords-somatic)</td>
+</tr>
+<tr>
+<td>var_id</td>
+<td>character</td>
+<td>chr:pos_ref/alt</td>
+</tr>
+<tr>
+<td>chr</td>
+<td>character</td>
+<td>chromosome</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>integer</td>
+<td>genomic position</td>
+</tr>
+<tr>
+<td>ref</td>
+<td>character</td>
+<td>reference allele</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>character</td>
+<td>alternate allele</td>
+</tr>
+<tr>
+<td>context</td>
+<td>character</td>
+<td>3 base context for SNV</td>
+</tr>
+<tr>
+<td>sbs96</td>
+<td>character</td>
+<td>3 base context for SNV - sbs format</td>
+</tr>
+<tr>
+<td>gene_name</td>
+<td>character</td>
+<td>SYMBOL of gene</td>
+</tr>
+<tr>
+<td>gene_id</td>
+<td>character</td>
+<td>ENSG Gene ID</td>
+</tr>
+<tr>
+<td>TRANSCRIPT</td>
+<td>character</td>
+<td>ENST (or other) transcript ID</td>
+</tr>
+<tr>
+<td>EXON</td>
+<td>character</td>
+<td>exon #/#of exons</td>
+</tr>
+<tr>
+<td>HGVSc</td>
+<td>character</td>
+<td>DNA change</td>
+</tr>
+<tr>
+<td>HGVSp</td>
+<td>character</td>
+<td>protein change</td>
+</tr>
+<tr>
+<td>Consequence</td>
+<td>character</td>
+<td>from VEP?</td>
+</tr>
+<tr>
+<td>IMPACT</td>
+<td>character</td>
+<td>from VEP</td>
+</tr>
+<tr>
+<td>SIFT</td>
+<td>character</td>
+<td>SIFT score</td>
+</tr>
+<tr>
+<td>Warnings</td>
+<td>character</td>
+<td>??</td>
+</tr>
+<tr>
+<td>HGVS_Equivalent</td>
+<td>character</td>
+<td>other transcripts for which the HGVSp would be the same</td>
+</tr>
+<tr>
+<td>AFT</td>
+<td>numeric</td>
+<td>Allele Frequency Tumor</td>
+</tr>
+<tr>
+<td>AFN</td>
+<td>numeric</td>
+<td>Allele Frequence Normal</td>
+</tr>
+<tr>
+<td>ADT</td>
+<td>numeric</td>
+<td>Alt Dept Tumor</td>
+</tr>
+<tr>
+<td>DPT</td>
+<td>numeric</td>
+<td>Depth Tumor</td>
+</tr>
+<tr>
+<td>ADN</td>
+<td>numeric</td>
+<td>Alt Depth Normal</td>
+</tr>
+<tr>
+<td>DPN</td>
+<td>numeric</td>
+<td>Depth Normal</td>
+</tr>
+<tr>
+<td>ADT_FWD</td>
+<td>integer</td>
+<td>Alt depth in FWD direction</td>
+</tr>
+<tr>
+<td>ADT_REV</td>
+<td>integer</td>
+<td>Alt depth in REV direction</td>
+</tr>
+<tr>
+<td>str</td>
+<td>logical</td>
+<td>short tandem repeat?</td>
+</tr>
+<tr>
+<td>str_ru</td>
+<td>character</td>
+<td>repeat unit</td>
+</tr>
+<tr>
+<td>str_len</td>
+<td>integer</td>
+<td>repeat length</td>
+</tr>
+<tr>
+<td>str_diff</td>
+<td>integer</td>
+<td>??</td>
+</tr>
+<tr>
+<td>ecnt</td>
+<td>integer</td>
+<td># of mutations in region ?</td>
+</tr>
+<tr>
+<td>tlod</td>
+<td>numeric</td>
+<td>log odds variant is in the tumor</td>
+</tr>
+<tr>
+<td>nlod</td>
+<td>numeric</td>
+<td>log odds the variant is not in the normal</td>
+</tr>
+<tr>
+<td>flod</td>
+<td>numeric</td>
+<td>log odd the variant is not in the normal given the AF in the tumor</td>
+</tr>
+<tr>
+<td>xfet</td>
+<td>numeric</td>
+<td>Fisher's Exact Test p-value ref/alt tumor/normal</td>
+</tr>
+<tr>
+<td>sor</td>
+<td>numeric</td>
+<td>Strand Odds Ratio</td>
+</tr>
+<tr>
+<td>mqrs</td>
+<td>numeric</td>
+<td>Map Quality Rank Sum</td>
+</tr>
+<tr>
+<td>mqs</td>
+<td>numeric</td>
+<td>Map Quality Sum</td>
+</tr>
+<tr>
+<td>oxog</td>
+<td>numeric</td>
+<td>likelihood of oxoG</td>
+</tr>
+<tr>
+<td>dbsnp</td>
+<td>integer</td>
+<td>dbSNP ID</td>
+</tr>
+<tr>
+<td>clinid</td>
+<td>integer</td>
+<td>CLinVar ID</td>
+</tr>
+<tr>
+<td>clinvar</td>
+<td>character</td>
+<td>ClinVar count</td>
+</tr>
+<tr>
+<td>cosmic_cnt</td>
+<td>integer</td>
+<td>COSMIC count</td>
+</tr>
+<tr>
+<td>gnomad_af</td>
+<td>numeric</td>
+<td>gnomAD Pop Allele Frequency</td>
+</tr>
+<tr>
+<td>kg_af</td>
+<td>numeric</td>
+<td>1000G Pop Allele Frequency</td>
+</tr>
+<tr>
+<td>pon</td>
+<td>character</td>
+<td>?</td>
+</tr>
+<tr>
+<td>rmsk_hit</td>
+<td>character</td>
+<td>RepeatMasker Hit</td>
+</tr>
+<tr>
+<td>is.indel</td>
+<td>logical</td>
+<td>is it an InDel?</td>
+</tr>
+<tr>
+<td>sblr</td>
+<td>numeric</td>
+<td>??</td>
+</tr>
+<tr>
+<td>all.pon</td>
+<td>integer</td>
+<td>??</td>
+</tr>
+<tr>
+<td>pid</td>
+<td>character</td>
+<td>??</td>
+</tr>
+<tr>
+<td>vcf_filter</td>
+<td>character</td>
+<td>??</td>
+</tr>
+<tr>
+<td>ccf</td>
+<td>numeric</td>
+<td>Percentage of cancer cells harboring this SNV</td>
+</tr>
+<tr>
+<td>m</td>
+<td>integer</td>
+<td>Number of Alleles in each tumor cell harboring this SNV</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

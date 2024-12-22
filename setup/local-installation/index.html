@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Local Installation - TPO</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">TPO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../overview/" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setup</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../summary/" class="dropdown-item">Summary</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Local Installation</a>
+</li>
+                                    
+<li>
+    <a href="../local-build/" class="dropdown-item">Local Build</a>
+</li>
+                                    
+<li>
+    <a href="../cloud-deployment/" class="dropdown-item">Cloud Deployment</a>
+</li>
+                                    
+<li>
+    <a href="../local-development/" class="dropdown-item">Local Development</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/cli/" class="dropdown-item">TPO Command Line Interface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/configuration/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/settings-file/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/genome-support/" class="dropdown-item">Genome-Support</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/bcl-barcodes/" class="dropdown-item">BCL-Barcodes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tasks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/tasks/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/analysis-tasks/" class="dropdown-item">Analysis Tasks</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/development-tasks/" class="dropdown-item">Development Tasks</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pipelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/pipelines/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">R Packages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/r-packages/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/tpolib/" class="dropdown-item">tpolib</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/codac/" class="dropdown-item">codac</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/cnvex/" class="dropdown-item">cnvex</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/carat/" class="dropdown-item">carat</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/caniq/" class="dropdown-item">caniq</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Shiny Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/shiny-apps/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/curve/" class="dropdown-item">curve</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Output</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../output/somatic-variants/" class="dropdown-item">Somatic Variants</a>
+</li>
+                                    
+<li>
+    <a href="../../output/silos-and-vaults/" class="dropdown-item">Silos and Vaults</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/architecture/" class="dropdown-item">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../development/debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../../development/repository/" class="dropdown-item">Repository</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-references/" class="dropdown-item">Updating References</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-ensembl/" class="dropdown-item">Updating Ensembl</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-panel-of-normals/" class="dropdown-item">Updating Panel-of-Normals</a>
+</li>
+                                    
+<li>
+    <a href="../../development/unit-testing/" class="dropdown-item">Unit Testing</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-tasks/" class="dropdown-item">Adding Tasks</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-capture-panel/" class="dropdown-item">Adding Capture Panel</a>
+</li>
+                                    
+<li>
+    <a href="../../development/use-tpo-in-local-mode/" class="dropdown-item">Use TPO in Local Mode</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Notes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../notes/overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/circos/" class="dropdown-item">circos</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/examples/" class="dropdown-item">Examples</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/misc/" class="dropdown-item">Misc</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/integrative-analysis/" class="dropdown-item">Integrative Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/use-cases/" class="dropdown-item">Use Cases</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/variant-and-feature-manual-review/" class="dropdown-item">Variant & Feature Manual Review</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../summary/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../local-build/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#prerequisites-and-dependencies-for-installation" class="nav-link">Prerequisites and dependencies for installation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#required-software" class="nav-link">Required software</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#required-accounts-and-licenses" class="nav-link">Required accounts and licenses</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installing-tpo" class="nav-link">Installing TPO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="prerequisites-and-dependencies-for-installation">Prerequisites and dependencies for installation</h1>
+<p>TPO is designed ground-up to work on the Google Cloud and uses <a href="https://www.sentieon.com/products/">Sentieon</a> tools to accelerate and improve some analyses. Optionally, TPO can be run locally, which is recommended for development and debugging purposes, and utilize only open-source tools.</p>
+<p>This section describes the process of instaling the TPO CLI on a local machine. Additional steps are required to enable the local execution
+of TPO pipelines either remotely (default) or <a href="Cloud-Deployment">Cloud Deployment</a>, or locally <a href="Local-Deployment">Local Deployment</a>. </p>
+<h2 id="required-software">Required software</h2>
+<p>The following software need to be installed by the user or systems administrator:</p>
+<ol>
+<li>Linux (TPO is tested on Ubuntu 22.04 and RHEL8), but any modern Linux distribution should work.</li>
+<li>Python 3.6+</li>
+<li><a href="https://pypi.org/project/moke">Moke</a> 1.2.5+</li>
+<li>Docker (recommended) or Podman (less well tested)</li>
+<li><a href="https://cloud.google.com/sdk/docs/install">Google Cloud SDK</a></li>
+<li>rsync, pigz</li>
+</ol>
+<p>All of the tools above are required for both local and remote execution of TPO. The documentation only covers installation of Moke, and basic test to veryify that Docker and the cloud SDK are correctly configured.</p>
+<h3 id="moke">Moke</h3>
+<p>Moke provides a Python library to facilitate the writing of command-line tools, it transforms a Python module into a command-line script. Every function in the module can become a sub-command, with options inferred from the argument list and the optional doc string.</p>
+<p>The TPO CLI (Command Line Interface) is implemented as Python modules transformed at runtime by moke into a CLI. Moke can be installed from PIP.</p>
+<pre><code>$ pip3 install --user moke
+</code></pre>
+<p>If <code>moke</code> was installed previously it is necessary to force an upgrade.</p>
+<pre><code>$ pip3 install --user moke -U
+</code></pre>
+<p>To test the installation, try importing moke in the default Python interpreter.</p>
+<pre><code>$ python3
+&gt;&gt;&gt; import moke
+</code></pre>
+<p>If this succeeded please proceed to the next step. If not the following test may help identifying the problem. Moke will bind to the Python executable used during its installation. However it is helpful to check whether the <code>site-packages</code> directory of the default <code>python3</code>, as found using the following command, matches the one for <code>pip3</code>.</p>
+<pre><code># site-packages directory of python3
+$ /usr/bin/env python3
+&gt;&gt;&gt; import site; site.getsitepackages()
+</code></pre>
+<pre><code># site-packages directory of pip3
+$ pip3 --version
+</code></pre>
+<h3 id="testing-the-installation">Testing the installation</h3>
+<p>Docker installation and permissions can be typically verified using the following command:</p>
+<pre><code>$ docker run hello-world
+| Unable to find image 'hello-world:latest' locally
+| latest: Pulling from library/hello-world
+| 2db29710123e: Pull complete 
+| Digest: sha256:2498fce14358aa50ead0cc6c19990fc6ff866ce72aeb5546e1d59caac3d0d60f
+| Status: Downloaded newer image for hello-world:latest
+| 
+| Hello from Docker!
+| This message shows that your installation appears to be working correctly.
+</code></pre>
+<p>Python installation can be tested as follows:</p>
+<pre><code>$ /usr/bin/env python
+| Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
+| [GCC 8.4.0] on linux
+| Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+</code></pre>
+<p>The <code>moke</code> command run in any directory (other than the TPO codebase), should produce the following output:</p>
+<pre><code>$ moke
+| moke: *** No mokefile.py found. Try 'moke new'. Stop.
+</code></pre>
+<h3 id="google-cloud-sdk">Google Cloud SDK</h3>
+<p>Please refer to the <a href="https://cloud.google.com/sdk/docs/install">official document</a> of Google Cloud SDk for its installation</p>
+<p>After installation, Google Cloud SDK needs initiation with GCP account which is discussed in the next GCP account part.</p>
+<pre><code>gcloud init
+</code></pre>
+<p>If executed locally, the <code>gcloud</code> tool provided by the Google Cloud SDK will not be used, and <code>gsutil</code> will only be used to download TPO reference files and input sequencing data.</p>
+<h2 id="required-accounts-and-licenses">Required accounts and licenses</h2>
+<p>GCP account is required for TPO to run in the cloud, and Sentieon license is essential if TPO is expected to run in Sentieon mode.</p>
+<h3 id="gcp-account">GCP account</h3>
+<ul>
+<li>If intending to use TPO on the Google Cloud Platform (GCP), the user will need a GCP account with standard permissions:<ul>
+<li>creating instances, images, and disks using the <a href="https://cloud.google.com/sdk/gcloud">gcloud</a> tool.</li>
+<li>reading from and writing to GCP buckets using the <a href="https://cloud.google.com/storage/docs/gsutil">gsutil</a> tool.</li>
+<li>(optionally) creating an GCP <a href="https://cloud.google.com/filestore">File Store</a> NFS share.</li>
+</ul>
+</li>
+</ul>
+<p>The custom GCP information and settings should be provided to TPO via the configuration file <code>&lt;config.ini&gt;</code>. Please refer to <a href="Configuration#GCP">Configuration</a> for details on how to configure TPO and a GCP project.</p>
+<h3 id="sention-license">Sention license</h3>
+<p>Secure a license file from <a href="https://www.sentieon.com/">Sentieon</a>. A <a href="https://www.sentieon.com/home/free-trial/">free-trial</a> is available.</p>
+<p>The Sentieon software license file (or license server) should be provided to TPO via the configuration file <code>&lt;config.ini&gt;</code>. Please refer <a href="QuickStart#Sentieon">here</a> for details on how to configure TPO to use Sentieon license server or license file.</p>
+<p>Downloading the Sentieon tools is not required as these are bundled within TPO, but Sentieon is not functional without a license. </p>
+<h2 id="installing-tpo">Installing TPO</h2>
+<p>TPO is ready directly after git clone:</p>
+<pre><code>$ git clone https://github.com/mctp/tpo
+</code></pre>
+<p>This should create a directory <code>tpo</code>, referred to as <code>$TPO_ROOT</code> throughout the documentation with the following contents</p>
+<pre><code>$ tree --dirsfirst -L 1 tpo
+tpo
+| ├── base
+| ├── config
+| ├── mods
+| ├── pipe
+| ├── rlibs
+| ├── scripts
+| ├── mokefile.py
+| ├── README.md
+| └── tpo.py -&gt; mokefile.py
+</code></pre>
+<p>To check if the installation is functional (mostly if the default python version is the same as the one used by <code>pip3</code>):</p>
+<pre><code>$ tpo/tpo.py
+| usage: tpo.py [-h] [-config CONFIG] [-cargs CARGS] [-ls LS]
+|               [-ll {debug,info,subdefault,default,warn,error}] [-lf {nltm}]
+| {gcp_root_build,cords_align,refs_pull,code_pull,gcp_root_push,cords_structural,gcp_root_pull,crisp_quasr,crisp_codac,crisp_germline,crisp_quant,crisp_align,template,code_push,code_build,gcp_configure,bcl,boot_pull,gcp_instance,gcp_boot_build,cords_misc,cords_germline,carat_report,cords_somatic,refs_push,boot_push,cords_unalign,cords_postalign,carat_anno,boot_build,cords_cnvex}
+|              ...
+| tpo.py: error: too few arguments
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
