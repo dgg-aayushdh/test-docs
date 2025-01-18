@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../usage/shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -339,7 +339,7 @@
 <h1 id="prerequisites-and-dependencies-for-installation">Prerequisites and dependencies for installation</h1>
 <p>TPO is designed ground-up to work on the Google Cloud and uses <a href="https://www.sentieon.com/products/">Sentieon</a> tools to accelerate and improve some analyses. Optionally, TPO can be run locally, which is recommended for development and debugging purposes, and utilize only open-source tools.</p>
 <p>This section describes the process of instaling the TPO CLI on a local machine. Additional steps are required to enable the local execution
-of TPO pipelines either remotely (default) or <a href="Cloud-Deployment">Cloud Deployment</a>, or locally <a href="Local-Deployment">Local Deployment</a>. </p>
+of TPO pipelines either remotely (default) or <a href="../cloud-deployment">Cloud Deployment</a>, or locally <a href="../local-development">Local Deployment</a>. </p>
 <h2 id="required-software">Required software</h2>
 <p>The following software need to be installed by the user or systems administrator:</p>
 <ol>
@@ -410,9 +410,9 @@ $ pip3 --version
 </ul>
 </li>
 </ul>
-<p>The custom GCP information and settings should be provided to TPO via the configuration file <code>&lt;config.ini&gt;</code>. Please refer to <a href="Configuration#GCP">Configuration</a> for details on how to configure TPO and a GCP project.</p>
+<p>The custom GCP information and settings should be provided to TPO via the configuration file <code>&lt;config.ini&gt;</code>. Please refer to <a href="../../usage/configuration/overview">Configuration</a> for details on how to configure TPO and a GCP project.</p>
 <h3 id="sention-license">Sention license</h3>
-<p>Secure a license file from <a href="https://www.sentieon.com/">Sentieon</a>. A <a href="https://www.sentieon.com/home/free-trial/">free-trial</a> is available.</p>
+<p>Secure a license file from <a href="https://www.sentieon.com/">Sentieon</a>. A <a href="https://www.sentieon.com/free-trial/">free-trial</a> is available.</p>
 <p>The Sentieon software license file (or license server) should be provided to TPO via the configuration file <code>&lt;config.ini&gt;</code>. Please refer <a href="QuickStart#Sentieon">here</a> for details on how to configure TPO to use Sentieon license server or license file.</p>
 <p>Downloading the Sentieon tools is not required as these are bundled within TPO, but Sentieon is not functional without a license. </p>
 <h2 id="installing-tpo">Installing TPO</h2>
@@ -445,6 +445,7 @@ tpo
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>

@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Structural Viewer - TPO</title>
+        <title>Pipeline sections - TPO</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../../css/brands.min.css" rel="stylesheet">
@@ -118,19 +118,19 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../pipelines/overview/" class="dropdown-item">Overview</a>
+    <a href="../overview/" class="dropdown-item">Overview</a>
 </li>
             
 <li>
-    <a href="../../pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+    <a href="../onco-seq/" class="dropdown-item">OncoSeq</a>
 </li>
             
 <li>
-    <a href="../../pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+    <a href="../wgs-wes/" class="dropdown-item">WGS+WES</a>
 </li>
             
 <li>
-    <a href="../../pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+    <a href="../shallow-wgs/" class="dropdown-item">Shallow WGS</a>
 </li>
     </ul>
   </li>
@@ -170,19 +170,19 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../overview/" class="dropdown-item">Overview</a>
+    <a href="../../shiny-apps/overview/" class="dropdown-item">Overview</a>
 </li>
             
 <li>
-    <a href="../curve/" class="dropdown-item">curve</a>
+    <a href="../../shiny-apps/curve/" class="dropdown-item">curve</a>
 </li>
             
 <li>
-    <a href="../cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+    <a href="../../shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
 </li>
             
 <li>
-    <a href="../structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -305,7 +305,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#structural-viewer" class="nav-link">Structural Viewer</a>
+            <li class="nav-item" data-bs-level="1"><a href="#pipeline-sections" class="nav-link">Pipeline sections</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#settings-descriptions" class="nav-link">Settings descriptions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -314,13 +319,42 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="structural-viewer">Structural Viewer</h1>
-<p>Structural Viewer documentation goes here. </p></div>
+<h1 id="pipeline-sections">Pipeline sections</h1>
+<pre><code>[BCL]
+# BCL settings and parameters 
+
+[CORDS]
+# Settings related to DNA analyses including
+# - Alignment
+# - Somatic variant calling
+# - Germline variant calling
+# - Structural variant calling
+# - Copy-number variant calling
+# - Miscellaneous analyses
+
+[CRISP]
+# Settings related to RNA analyses
+# - Alignment
+# - Germline variant calling
+# - Alignment-free quantification
+# - Alignment-based quantification
+# - Fusion detection
+
+[CARAT]
+# Settings related to variant annotation
+
+[TEST]
+# Settings useful during debugging and testing
+</code></pre>
+<p>Most of the settings are required, there fore a user should generally start with a template and modify. Templates are provided in the <a href="../tree/master/config">config</a> directory in the main repository.
+Configuration files are neither forward nor backward-compatible i.e. an upgrade of TPO may require and update to the configuration file, but those changes are typically very minor.</p>
+<h1 id="settings-descriptions">Settings descriptions</h1></div>
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../../js/bootstrap.bundle.min.js"></script>

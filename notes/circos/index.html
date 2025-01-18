@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../usage/shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -315,6 +315,11 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
+            <li class="nav-item" data-bs-level="1"><a href="#circos" class="nav-link">Circos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-bs-level="1"><a href="#cohort-level-circos-plots" class="nav-link">Cohort Level Circos Plots</a>
               <ul class="nav flex-column">
               </ul>
@@ -324,6 +329,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="circos">Circos</h1>
 <p>Demo code to make circos plots from (meta)Vaults</p>
 <p>Load the vaults and make a metavault</p>
 <pre><code>devtools::load_all('./rlibs/carat/')
@@ -335,7 +341,7 @@ mv &lt;- metaVault(vaults)
 <pre><code>#one vault, saving to &lt;vault$meta$id&gt;.pdf
 circosPlot(vaults[[1]],savef=TRUE) # saves 1 pdf
 </code></pre>
-<p><img alt="image" src="circos_demo.png" /></p>
+<p><img alt="image" src="../circos_demo.png" /></p>
 <p>Setup to filter </p>
 <pre><code>genes &lt;- 'grch38.108.clean.gtf'
 settings &lt;- system.file(sprintf(&quot;extdata/settings/%s.R&quot;, 'default'), package=&quot;carat&quot;)
@@ -395,12 +401,13 @@ cnv, sv, fusion: booleans for which data types to display Default: TRUE
 cohortCicosPlot(dtvt, title=&quot;My Cohort&quot;,file='./my_cohort_luad.pdf')
 </code></pre>
 <p>The plot shows all SV in black and all fusions in gold, with the thickness of the lines proportional to the recurrence of the event in the cohort. The innermost ring shows genomic density of translocations (purple), the next ring shows deletions (blue), duplications (red) and inversions (green). The next ring shows the average copy of each cytoband in all samples (the y axis is <code>C</code>, the x or radial axis is genomic location, the colors are standard CNV colors, LOH: green, Gain: red, Loss: blue, Neutral: black). All cases are plotted with some <code>alpha</code>, so darker colors means more cases have that value (i.e. every cytoband has <code>n</code> points plotted where <code>n</code> is the number of cases in the cohort).     </p>
-<p><img alt="image2" src="cohort_circos_demo.png" /></p></div>
+<p><img alt="image2" src="../cohort_circos_demo.png" /></p></div>
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>

@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -315,11 +315,6 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#overview" class="nav-link">Overview</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
             <li class="nav-item" data-bs-level="1"><a href="#tpo-config-files" class="nav-link">TPO config files</a>
               <ul class="nav flex-column">
               </ul>
@@ -331,6 +326,23 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#secrets-sentieon-and-aws" class="nav-link">[SECRETS] Sentieon and AWS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#runtime-local-mode" class="nav-link">[RUNTIME] Local mode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gcp-remote-mode" class="nav-link">[GCP] Remote mode</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#pipeline-configuration" class="nav-link">Pipeline configuration</a>
+              <ul class="nav flex-column">
               </ul>
             </li>
         </ul>
@@ -338,9 +350,8 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="overview">Overview</h1>
-<p>Following <a href="Installation">installation</a>, a series of steps are required to make TPO operational. These steps involve the downloading of reference files and the creation of Docker and GCP images. Some configuration is necessary to tell TPO how to perform these steps, like where to save files (references, temporary, results), which GCP project to use, and how to authorize the Sentieon tools.</p>
-<p>In addition, the computational pipelines can be fully customized and configured, how to change their settings is described later in the <a href="Settings">Pipelines Settings</a> section.</p>
+<p>Following <a href="../../../setup/local-installation">installation</a>, a series of steps are required to make TPO operational. These steps involve the downloading of reference files and the creation of Docker and GCP images. Some configuration is necessary to tell TPO how to perform these steps, like where to save files (references, temporary, results), which GCP project to use, and how to authorize the Sentieon tools.</p>
+<p>In addition, the computational pipelines can be fully customized and configured, how to change their settings is described later in the <a href="../../pipelines/settings">Pipelines Settings</a> section.</p>
 <h1 id="tpo-config-files">TPO config files</h1>
 <p>TPO is configured through only a single configuration file. The format of the configuration file follows the Python <code>configparser</code> standard, which is based on the Microsoft Windows INI format see: <a href="https://docs.python.org/3/library/configparser.html">configparser module</a>. The config file, typically using the <code>.ini</code> or <code>.config</code> extension is divided into several sections. </p>
 <p>Since most of the settings are required but will rarely be modified by the user, the general strategy is to start with one of the provided templates and modify it as needed.</p>
@@ -391,81 +402,66 @@ More examples of config files can be found on https://github.com/mctp/tpo-mctp-c
 CODE_VER = 0.0.1-rel1
 BOOT_VER = 0.0.1-rel1
 ROOT_VER = 0.0.1-rel1
-````
-
-`REFS_VER` is the location on a bucket with all the reference files which will be put into ROOT_VER
-
-## [SECRETS] Sentieon and AWS
-
-The `SENTIEON_LICENSE` variable controls the `ip-address:port` of the Sentieon license server or a license file. Please refer to the Sentieon documentation for details on how to set up a [license server](https://support.sentieon.com/quick_start/index.html#appendix-set-up-license). If you choose to use a license file, please refer to the [installation instructions](Installation#LicenseFile).
-
 </code></pre>
-<p>[SECRETS]
-SENTIEON_LICENSE = ~CUSTOM~</p>
-<pre><code>
-TPO understands the following secret variables in addition to the `SENTIEON_LICENSE`. While both variables can be stored in the config file (in the [SECRETS] section) this is not recommended as this exposes them in plain text. It is recommended to provide (in a secure way) at runtime via the `-cargs` argument to `./tpo.py`.
-
+<p><code>REFS_VER</code> is the location on a bucket with all the reference files which will be put into ROOT_VER</p>
+<h2 id="secrets-sentieon-and-aws">[SECRETS] Sentieon and AWS</h2>
+<p>The <code>SENTIEON_LICENSE</code> variable controls the <code>ip-address:port</code> of the Sentieon license server or a license file. Please refer to the Sentieon documentation for details on how to set up a <a href="https://support.sentieon.com/quick_start/index.html#appendix-set-up-license">license server</a>. If you choose to use a license file, please refer to the <a href="Installation#LicenseFile">installation instructions</a>.</p>
+<pre><code>[SECRETS]
+SENTIEON_LICENSE = ~CUSTOM~
 </code></pre>
-<p>[SECRETS]
-AWS_ACCESS_KEY_ID = <key id>
-AWS_SECRET_ACCESS_KEY = <secret access key></p>
-<pre><code>
-The two variables allow TPO to access files stored in AWS buckets. If provided TPO can access `s3://` read from directories like it would from `gs://`` buckets. Writing results to AWS buckets is not supported.
-
-## [RUNTIME] Local mode
-
-The majority of settings in the `[RUNTIME]` config file section control how `TPO` uses various locations on the local computer to store various files and assets. Importantly, the user (and root) must have read-write access to all directories in this section. The optional settings `TEMP`, `RUNS`, `REFS` should be left blank to use defaults.
-
+<p>TPO understands the following secret variables in addition to the <code>SENTIEON_LICENSE</code>. While both variables can be stored in the config file (in the [SECRETS] section) this is not recommended as this exposes them in plain text. It is recommended to provide (in a secure way) at runtime via the <code>-cargs</code> argument to <code>./tpo.py</code>.</p>
+<pre><code>[SECRETS]
+AWS_ACCESS_KEY_ID = &lt;key id&gt;
+AWS_SECRET_ACCESS_KEY = &lt;secret access key&gt;
 </code></pre>
-<p>ROOT = required directory where TPO will store a bundle of references, tools, libraries necessary for the execution of pipelines.
+<p>The two variables allow TPO to access files stored in AWS buckets. If provided TPO can access <code>s3://</code> read from directories like it would from `gs://`` buckets. Writing results to AWS buckets is not supported.</p>
+<h2 id="runtime-local-mode">[RUNTIME] Local mode</h2>
+<p>The majority of settings in the <code>[RUNTIME]</code> config file section control how <code>TPO</code> uses various locations on the local computer to store various files and assets. Importantly, the user (and root) must have read-write access to all directories in this section. The optional settings <code>TEMP</code>, <code>RUNS</code>, <code>REFS</code> should be left blank to use defaults.</p>
+<pre><code>ROOT = required directory where TPO will store a bundle of references, tools, libraries necessary for the execution of pipelines.
 WORK = required directory to store TPO results including TEMP, RUNS, REFS below. 
 TEMP = optional (default: $WORK/tmp), directory to store temporary files (best to use fast SSD-backed storage)
 RUNS = optional (default: $WORK/runs), directory to store result files 
-REFS = optional (default: $WORK/refs), directory to store required reference files and assets (can be slower NFS storage)</p>
-<pre><code>
-## [GCP] Remote mode
-
-Settings in the `[GCP]` and `[RUNTIME]`config section controls how TPO interacts with the GCP.
-
-Settings which control how GCP should be used:
-
+REFS = optional (default: $WORK/refs), directory to store required reference files and assets (can be slower NFS storage)
 </code></pre>
-<p>[GCP]
-PROJECT = <name of GCP project user has access to>
-LOCATION = <which location the computation will take place e.g. us-central1>
-ZONE = <which zone the computation will take place e.g. us-central1-f>
-NETWORK = <name of the network the TPO GCP instances will be started in>
-SUBNET = <name of the subnet the TPO GCP instances will be started in>
-TAG = <TODO>
-SERVICE_ACCOUNT = <name of the service account to run the TPO GCP instances typically xxxx-compute@developer.gserviceaccount.com></p>
-<pre><code>
-Settings which control what happens at runtime (pipeline execution):
-
+<h2 id="gcp-remote-mode">[GCP] Remote mode</h2>
+<p>Settings in the <code>[GCP]</code> and <code>[RUNTIME]</code>config section controls how TPO interacts with the GCP.</p>
+<p>Settings which control how GCP should be used:</p>
+<pre><code>[GCP]
+PROJECT = &lt;name of GCP project user has access to&gt;
+LOCATION = &lt;which location the computation will take place e.g. us-central1&gt;
+ZONE = &lt;which zone the computation will take place e.g. us-central1-f&gt;
+NETWORK = &lt;name of the network the TPO GCP instances will be started in&gt;
+SUBNET = &lt;name of the subnet the TPO GCP instances will be started in&gt;
+TAG = &lt;TODO&gt;
+SERVICE_ACCOUNT = &lt;name of the service account to run the TPO GCP instances typically xxxx-compute@developer.gserviceaccount.com&gt;
 </code></pre>
-<p>[RUNTIME]
+<p>Settings which control what happens at runtime (pipeline execution):</p>
+<pre><code>[RUNTIME]
 WORK_BUCKET = mctp-tpo/test-tpo
-WORK_DONE = <fail or skip> what should happen if running TPO would result in overwriting, to overwrite <code>--overwrite</code> needs to be provided.</p>
-<pre><code>
-# Pipeline configuration
-
+WORK_DONE = &lt;fail or skip&gt; what should happen if running TPO would result in overwriting, to overwrite `--overwrite` needs to be provided.
 </code></pre>
-<p>[BCL] BCL settings and parameters </p>
-<p>[CORDS] Settings related to DNA analyses including
+<h1 id="pipeline-configuration">Pipeline configuration</h1>
+<pre><code>[BCL] BCL settings and parameters 
+
+[CORDS] Settings related to DNA analyses including
 - Alignment
 - Somatic variant calling
 - Germline variant calling
 - Structural variant calling
 - Copy-number variant calling
-- Miscellaneous analyses</p>
-<p>[CRISP] Settings related to RNA analyses
+- Miscellaneous analyses
+
+[CRISP] Settings related to RNA analyses
 - Alignment
 - Germline variant calling
 - Alignment-free quantification
 - Alignment-based quantification
-- Fusion detection</p>
-<p>[CARAT] Settings related to variant annotation</p>
-<p>[TEST] Settings useful during debugging and testing
-```</p>
+- Fusion detection
+
+[CARAT] Settings related to variant annotation
+
+[TEST] Settings useful during debugging and testing
+</code></pre>
 <table>
 <thead>
 <tr>
@@ -493,6 +489,7 @@ WORK_DONE = <fail or skip> what should happen if running TPO would result in ove
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../../js/bootstrap.bundle.min.js"></script>

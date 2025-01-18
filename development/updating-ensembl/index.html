@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../usage/shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -335,20 +335,6 @@
             </li>
               </ul>
             </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#original-gtf-file" class="nav-link">original GTF file</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            
-            <li class="nav-item" data-bs-level="1"><a href="#clean-gtf-and-fasta-file" class="nav-link">clean GTF and FASTA file</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#vep-file" class="nav-link">VEP file</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
@@ -384,10 +370,18 @@
 <p>We now have a set GCP instance image with the updated Docker images.</p>
 <h2 id="3-create-updated-reference-files">3. Create Updated reference files</h2>
 <ol>
-<li>Download and Ungzip the following files, replacing 106 with the desired version</li>
-<li>http://ftp.ensembl.org/pub/release-106/variation/vep/homo_sapiens_merged_vep_106_GRCh38.tar.gz</li>
-<li>http://ftp.ensembl.org/pub/release-106/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz</li>
-<li>http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz</li>
+<li>
+<p>Download and Ungzip the following files, replacing 106 with the desired version</p>
+</li>
+<li>
+<p><a href="http://ftp.ensembl.org/pub/release-106/variation/vep/homo_sapiens_merged_vep_106_GRCh38.tar.gz">http://ftp.ensembl.org/pub/release-106/variation/vep/homo_sapiens_merged_vep_106_GRCh38.tar.gz</a></p>
+</li>
+<li>
+<p><a href="http://ftp.ensembl.org/pub/release-106/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz">http://ftp.ensembl.org/pub/release-106/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz</a></p>
+</li>
+<li>
+<p><a href="http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz">http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz</a></p>
+</li>
 <li>Fix GTF file by combining multiple <code>tag</code> features into one <code>tags</code> feature</li>
 </ol>
 <pre><code>cat Homo_sapiens.GRCh38.108.gtf | scripts/make_gtf_tags.py fix_tags &gt; Homo_sapiens.GRCh38.108-tags.gtf
@@ -402,30 +396,33 @@ In an interactive R-session, walk through the steps in <code>scripts/make_ensemb
 <p>If it fails or gives warnings it means the structure of the GTF file changed, do not ignore investigate.</p>
 <h2 id="4-create-a-new-tporoot">4. Create a new <code>tporoot</code></h2>
 <p>We will use the new <code>tpoboot</code> instance image to build a new <code>tporoot</code> with the updated reference files</p>
-<ol>
-<li>Copy all new and updated files in the right places.
-```</li>
-</ol>
-<h1 id="original-gtf-file">original GTF file</h1>
-<p>cp Homo_sapiens.GRCh38.108.gtf $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.gtf
-cp Homo_sapiens.GRCh38.cdna.all.fa $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.cdna.fa</p>
-<h1 id="clean-gtf-and-fasta-file">clean GTF and FASTA file</h1>
-<p>cp Homo_sapiens.GRCh38.108.clean.gtf $XXX/v2/refs/refs/grch38/ensembl/grch38.108.clean.gtf
-cp Homo_sapiens.GRCh38.108.cdna.clean.fa $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.cdna.fa</p>
-<h2 id="vep-file">VEP file</h2>
-<p>cp homo_sapiens_merged_vep_108_GRCh38.tar.gz $XXX/v2/refs/refs/grch38/ensembl/grch38.108.merged.vep.tar
-<code>`
-2. Push updated reference files to the cloud using</code>refs_push<code>3. Build updated</code>tporoot<code>image.
-    - Update</code>ROOT_VER<code>to newer version reflecting update of both</code>BOOT_VER<code>and bump in Ensemble version, e.g. 
-      ```
-      ROOT_VER = 2.5-0-grch38-tpo-108
-      ```
-    - Trigger build of new</code>tporoot<code>GCP image using</code>gcp_root_build`</p></div>
+<ul>
+<li>Copy all new and updated files in the right places.</li>
+</ul>
+<pre><code># original GTF file
+cp Homo_sapiens.GRCh38.108.gtf $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.gtf
+cp Homo_sapiens.GRCh38.cdna.all.fa $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.cdna.fa
+# clean GTF and FASTA file
+cp Homo_sapiens.GRCh38.108.clean.gtf $XXX/v2/refs/refs/grch38/ensembl/grch38.108.clean.gtf
+cp Homo_sapiens.GRCh38.108.cdna.clean.fa $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.cdna.fa
+## VEP file
+cp homo_sapiens_merged_vep_108_GRCh38.tar.gz $XXX/v2/refs/refs/grch38/ensembl/grch38.108.merged.vep.tar
+</code></pre>
+<ul>
+<li>Push updated reference files to the cloud using <code>refs_push</code></li>
+<li>Build updated <code>tporoot</code> image.<ul>
+<li>Update <code>ROOT_VER</code> to newer version reflecting update of both <code>BOOT_VER</code> and bump in Ensemble version, e.g. 
+  <code>ROOT_VER = 2.5-0-grch38-tpo-108</code></li>
+<li>Trigger build of new <code>tporoot</code> GCP image using <code>gcp_root_build</code></li>
+</ul>
+</li>
+</ul></div>
             </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>
