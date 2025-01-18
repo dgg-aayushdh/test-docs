@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Architecture - TPO</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">TPO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../overview/" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setup</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../setup/summary/" class="dropdown-item">Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-installation/" class="dropdown-item">Local Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-build/" class="dropdown-item">Local Build</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/cloud-deployment/" class="dropdown-item">Cloud Deployment</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-development/" class="dropdown-item">Local Development</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/cli/" class="dropdown-item">TPO Command Line Interface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/configuration/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/settings-file/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/genome-support/" class="dropdown-item">Genome-Support</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/bcl-barcodes/" class="dropdown-item">BCL-Barcodes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tasks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/tasks/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/analysis-tasks/" class="dropdown-item">Analysis Tasks</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/development-tasks/" class="dropdown-item">Development Tasks</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pipelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/pipelines/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">R Packages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/r-packages/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/tpolib/" class="dropdown-item">tpolib</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/codac/" class="dropdown-item">codac</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/cnvex/" class="dropdown-item">cnvex</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/carat/" class="dropdown-item">carat</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/caniq/" class="dropdown-item">caniq</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Shiny Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/shiny-apps/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/curve/" class="dropdown-item">curve</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Output</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../output/somatic-variants/" class="dropdown-item">Somatic Variants</a>
+</li>
+                                    
+<li>
+    <a href="../../output/silos-and-vaults/" class="dropdown-item">Silos and Vaults</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../repository/" class="dropdown-item">Repository</a>
+</li>
+                                    
+<li>
+    <a href="../updating-references/" class="dropdown-item">Updating References</a>
+</li>
+                                    
+<li>
+    <a href="../updating-ensembl/" class="dropdown-item">Updating Ensembl</a>
+</li>
+                                    
+<li>
+    <a href="../updating-panel-of-normals/" class="dropdown-item">Updating Panel-of-Normals</a>
+</li>
+                                    
+<li>
+    <a href="../unit-testing/" class="dropdown-item">Unit Testing</a>
+</li>
+                                    
+<li>
+    <a href="../adding-tasks/" class="dropdown-item">Adding Tasks</a>
+</li>
+                                    
+<li>
+    <a href="../adding-capture-panel/" class="dropdown-item">Adding Capture Panel</a>
+</li>
+                                    
+<li>
+    <a href="../use-tpo-in-local-mode/" class="dropdown-item">Use TPO in Local Mode</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Notes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../notes/overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/circos/" class="dropdown-item">circos</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/examples/" class="dropdown-item">Examples</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/misc/" class="dropdown-item">Misc</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/integrative-analysis/" class="dropdown-item">Integrative Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/use-cases/" class="dropdown-item">Use Cases</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/variant-and-feature-manual-review/" class="dropdown-item">Variant & Feature Manual Review</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../output/silos-and-vaults/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../debugging/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#architecture" class="nav-link">Architecture</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#r-packages" class="nav-link">R packages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#references" class="nav-link">References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#images" class="nav-link">Images</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#code-volume-docker-image" class="nav-link">Code volume Docker image</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#executable-docker-images" class="nav-link">Executable Docker images</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gcp-images" class="nav-link">GCP images</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gcp-instance" class="nav-link">GCP instance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#test-cases" class="nav-link">Test cases</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#developer-notes" class="nav-link">Developer Notes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="architecture">Architecture</h1>
+<p>TPO follows as much as possible </p>
+<p>Design principles:</p>
+<ul>
+<li>infrastructure is designed and optimized to run on the cloud</li>
+<li>easy to update and modify</li>
+<li>take advantage of GCP managed services (block storage, object storage, instances, images, container registries)</li>
+<li>pipelines should run locally for development and debugging purposes</li>
+<li>pipelines are implemented as simple shell scripts</li>
+</ul>
+<h2 id="r-packages">R packages</h2>
+<p>When adding new dependencies for packages in <code>rlibs</code>. The <code>tpobase</code> image. </p>
+<h2 id="references">References</h2>
+<p><strong>Warning</strong>: Always do a <code>refs_pull</code> prior to doing a <code>refs_push</code> as files absent locally will be deleted remotely in a <code>refs_push</code>.</p>
+<h2 id="images">Images</h2>
+<p>TPO uses two types of images, Docker images and GCP images. The main use for Docker images is to provide a standarized environment for the execution of pipelines, both locally and remotely on GCP. A secondary use case is to provide the TPO code to the using <a href="https://docs.docker.com/storage/volumes">volumes</a>. The docker images are built locally, and distributed using the Google Container Registry (GCR) to the GCP instances. The GCP images are used to launch standardized GCP instances and to provide those instances with large files which cannot be kept in a git repository, such as genomic references.</p>
+<p>Follwing the execution of a TPO command, the following steps happen:</p>
+<ol>
+<li>A GCP instance is started using the <code>tpoboot</code> GCP image. This image has all required TPO Docker images pre-loaded.</li>
+<li>The GCP instance mounts a read-only disk from the <code>tporoot</code> GCP image. This disk provides all required reference files under <code>/tpo</code>.</li>
+<li>The GCP instance downloads a <code>tpocode</code> Docker image which provides a version of the TPO codebase as a volume.</li>
+<li>On the GCP instance a Docker container is started from one of the Docker images (e.g. <code>tpocords</code>), with the <code>tpocode</code> Docker image mounted as a volume under <code>/code</code>.</li>
+<li>The running Docker container (provided with the volumes and input data) executes the pipeline.</li>
+</ol>
+<h2 id="code-volume-docker-image">Code volume Docker image</h2>
+<p>TPO uses a Docker volume to create snapshots of the TPO codebase (i.e. everything under <code>$TPO_ROOT</code>) to deploy on the cloud. The images are versioned using the <code>CODE_VER</code> variable in the <code>[TPO]</code> section of the config file.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>code_build</td>
+<td>Build the TPO code image locally</td>
+</tr>
+<tr>
+<td>code_push</td>
+<td>Push the image to the GCR registry</td>
+</tr>
+<tr>
+<td>code_pull</td>
+<td>Pull the image from the GCR registry</td>
+</tr>
+</tbody>
+</table>
+<p>The resulting image <code>tpocode</code> provides a <code>/code</code> volume which is mounted on the executable Docker images.</p>
+<h2 id="executable-docker-images">Executable Docker images</h2>
+<p>TPO uses 4 different Docker images. A base image, called <code>tpobase</code> and 3 derivative images.</p>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tpobase</td>
+<td>An Ubuntu 18.04 image configured to support the compilation and running of all TPO software</td>
+</tr>
+<tr>
+<td>tpocords</td>
+<td>tpobase + custom tools required for the <code>cords</code> pipelines</td>
+</tr>
+<tr>
+<td>tpocrisp</td>
+<td>tpobase + custom tools required for the <code>crisp</code> pipelines</td>
+</tr>
+<tr>
+<td>tpocarat</td>
+<td>tpobase + custom tools required for the <code>carat</code> pipelines</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>tpobase</code> image is a complete Ubuntu-based system with commonly required dependencies installed. The derivative images install software specific to certain types of analyses on top of the <code>tpobase</code> image.</p>
+<p>The following <code>tpo.py</code> commands control the building and push/pull of the Docker images. The images are versioned using the <code>BOOT_VER</code> variable in the <code>[TPO]</code> section of the config file.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boot_build</td>
+<td>Build the TPO docker images locally</td>
+</tr>
+<tr>
+<td>boot_push</td>
+<td>Push the images to the GCR registry</td>
+</tr>
+<tr>
+<td>boot_pull</td>
+<td>Pull the images from the GCR registry</td>
+</tr>
+</tbody>
+</table>
+<p>In general, there is typically no need to modify the images outside of TPO development. So the images are built and pushed once using <code>boot_build</code> and <code>boot_push</code>, respectively.</p>
+<h2 id="gcp-images">GCP images</h2>
+<p>Two GCP images are built, one <code>tpoboot</code> providing a standardized instance for all TPO cloud runs, and another <code>tporoot</code> containing all the files that are necessary for the TPO pipelines to run. The <code>tpoboot</code> and <code>tporoot</code> images are versioned using the <code>BOOT_VER</code> and <code>ROOT_VER</code> variable in the <code>[TPO]</code> section of the config file, respectively.</p>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tpoboot</td>
+<td>BOOT_VER</td>
+<td>Minimal Ubuntu-based image to launch GCP instances</td>
+</tr>
+<tr>
+<td>tporoot</td>
+<td>ROOT_VER</td>
+<td>Large image containing reference and index files</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>tpoboot</code> image is a minimal Ubuntu-based image with the TPO Docker images (<code>tpocords</code>, <code>tpocrisp</code>, <code>tpocarat</code>) pre-loaded. It only needs to be rebuilt if any of the Docker images gets updated, or there is a need to update the Ubuntu OS (e.g. security reasons).</p>
+<p>The <code>tporoot</code> image is a data volume and cannot be booted. It contains the complete set of assets required to run TPO. This includes genomic reference files, built indexes for various alignment tools, compiled R libraries etc. The contents of this image depend on some settings in the TPO configuration file. For example it contains built alignment indexes only for the genomic references indicated in <code>ALIGN_FASTA</code>. Therefore, the <code>tporoot</code> image has to be in general changed whenever any of the following variables is modified. </p>
+<ul>
+<li><code>ALIGN_FASTA</code></li>
+<li><code>ALIGN_NAME</code></li>
+<li><code>ALIGN_MASK</code></li>
+<li><code>QUANT_GTF</code></li>
+<li><code>QUANT_FASTA</code></li>
+<li><code>QUANT_NAME</code></li>
+<li><code>ANNO_VEPCACHE</code></li>
+</ul>
+<p>In practice, <code>tporoot</code> is built only once for a given reference genome configuration. TPO provides config template files for GRCh38 following community recommentations in <code>$TPO_ROOT/config</code>.</p>
+<p>Building the <code>tporoot</code> image requires considerable computational resources and cannot be done on a laptop or desktop computer. Currently the only way to create a new image is on the GCP. This process takes approximately 4 hours.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gcp_boot_build</td>
+<td>Build the <code>tpoboot</code> GCP image</td>
+</tr>
+<tr>
+<td>gcp_root_build</td>
+<td>Build the <code>tporoot</code> GCP image</td>
+</tr>
+<tr>
+<td>gcp_root_push</td>
+<td>Create a tar archive of the <code>tporoot</code> image and save it in a GCP bucket</td>
+</tr>
+<tr>
+<td>gcp_root_pull</td>
+<td>Download and extract the tar archive locally</td>
+</tr>
+</tbody>
+</table>
+<p>If intending to run TPO locally, following <code>gcp_root_build</code>, the user needs to execute <code>gcp_root_push</code> and <code>gcp_root_pull</code> to transfer the contents of <code>tporoot</code> into a local directory, as specified by the <code>ROOT</code> variable in the <code>[RUNTIME]</code> section of the config file.</p>
+<h2 id="gcp-instance">GCP instance</h2>
+<p>A GCP instance based on the <code>tpoboot-$BOOT_VER</code> image can be created using the following command:</p>
+<pre><code>$TPO_ROOT/tpo.py -config config/my_config.ini gcp_instance
+</code></pre>
+<p>Warning! Please not this command will start an instance which will be running indefinitely, possibly incurring high costs. The instance should be suspended, stopped, or terminated when not in use. Please see GCP documentation on how to accomplish this from either the CLI or cloud console. </p>
+<p>Add user to docker group in order to use docker:</p>
+<p><code>sudo usermod -aG docker &lt;userID&gt;</code></p>
+<h2 id="test-cases">Test cases</h2>
+<pre><code>./tpo.py -config mokefile_grch38-tpo-latest-v2-e106.ini cords_align HLGWCDRXX.1 SI_30806 \
+gs://tpo-refs/v2/test/fastq/tiny_SI_30806_HLGWCDRXX_0_1.fq.gz \
+gs://tpo-refs/v2/test/fastq/tiny_SI_30806_HLGWCDRXX_0_2.fq.gz
+</code></pre>
+<h2 id="developer-notes">Developer Notes</h2>
+<ul>
+<li>after Java update, check if bbmap JNI still compiles (i.e. if JAVA_HOME is valid)</li>
+<li>lots of error messages can be lost because we are running docker in -d, disable if debugging</li>
+<li>All hard-coded variables in build_refs need to go in order to support alternate species</li>
+<li>updating Ensembl: downlad fasta, bgzip, faidx, cdna for kallisto, gtf fix tags</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

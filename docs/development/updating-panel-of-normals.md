@@ -1,3 +1,5 @@
+# Panel Of Normals
+
 Create a multi-sample cohort BCF file `<COHORT_BCF>` out of multiple unfiltered VCFs from `cords-somatic`. The purpose of the panel is to quantify noisy positions as detected by `TNScope` therefore the input VCF files should be `-somatic-tnscope.vcf.gz`. Using multiple threads `<T>` will significantly speed-up this process.
 
 ```

@@ -1,6 +1,6 @@
 ## Overview
 
-The TPO commands fall into two main categories `pipeline` commands, and `infrastructure` commands (see list below). The `pipeline` commands execute TPO analysis pipelines given some input data and save the outputs in a GCP bucket. The `infrastructure` commands manage references, docker / GCP images, and used mostly in the [build](Build) and [development](Development) process.
+The TPO commands fall into two main categories `pipeline` commands, and `infrastructure` commands (see list below). The `pipeline` commands execute TPO analysis pipelines given some input data and save the outputs in a GCP bucket. The `infrastructure` commands manage references, docker / GCP images, and used mostly in the [build](../../../setup/local-build) and [development](../../../development/architecture) process.
 
 In general, the `pipeline` commands are configured (via a config file) and provided with inputs (as a parameters). The `infrastructure` commands are also configured via the same config file, but typically do not have data inputs.
 
@@ -59,7 +59,7 @@ In general, the `pipeline` commands are configured (via a config file) and provi
 ![tpo_flowchart](https://user-images.githubusercontent.com/19393296/167164207-afd721ec-a2f1-4234-8991-be6a12fc717b.jpg)
 
 ## Modifying pipeline command parameters
-Parameters used in the pipeline commands are set within the config files. Instructions for how to set these default parameters are discussed [here](https://github.com/mctp/tpo/wiki/Configuration). However, there are instances where we wish to modify pipeline commands for a subset of samples and do not wish to make an entirely new config file to do this. In this instance we can modify these paramaters by passing them when we call TPO. An axample for how to do this during Crisp-Quasr is shown below.
+Parameters used in the pipeline commands are set within the config files. Instructions for how to set these default parameters are discussed [here](../../configuration/overview). However, there are instances where we wish to modify pipeline commands for a subset of samples and do not wish to make an entirely new config file to do this. In this instance we can modify these paramaters by passing them when we call TPO. An axample for how to do this during Crisp-Quasr is shown below.
 
 ```
 ../../mokefile.py -config ../../mokefile_agilentv4_grch38-tpo_1.4.txt crisp_quasr SI_26995 ../../repo/crisp-align/SI_26995-CDMJCANXX-4/ --nowait --preemptible -cargs 'QUASR_MIXCR::false;QUASR_COUNTGTF::/../refs/grch38/ensembl/grch38.97.clean.gtf'

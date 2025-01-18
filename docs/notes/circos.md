@@ -1,3 +1,5 @@
+#Circos
+
 Demo code to make circos plots from (meta)Vaults
 
 
@@ -16,7 +18,7 @@ Make and save a single plot and save pdf
 circosPlot(vaults[[1]],savef=TRUE) # saves 1 pdf
 ```
 
-![image](circos_demo.png)
+![image](../circos_demo.png)
 
 Setup to filter 
 
@@ -99,4 +101,4 @@ cohortCicosPlot(dtvt, title="My Cohort",file='./my_cohort_luad.pdf')
 
 The plot shows all SV in black and all fusions in gold, with the thickness of the lines proportional to the recurrence of the event in the cohort. The innermost ring shows genomic density of translocations (purple), the next ring shows deletions (blue), duplications (red) and inversions (green). The next ring shows the average copy of each cytoband in all samples (the y axis is `C`, the x or radial axis is genomic location, the colors are standard CNV colors, LOH: green, Gain: red, Loss: blue, Neutral: black). All cases are plotted with some `alpha`, so darker colors means more cases have that value (i.e. every cytoband has `n` points plotted where `n` is the number of cases in the cohort).     
 
-![image2](cohort_circos_demo.png)
+![image2](../cohort_circos_demo.png)

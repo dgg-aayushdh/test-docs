@@ -30,7 +30,7 @@ $TPO_ROOT/tpo.py -project config/my_config.ini refs_pull
 
 Depending on the internet connection this may take some time (10+ minutes). A total of 50-100GB will be downloaded.
 
-See [Development](Development#References) for instructions on how to add custom files to the references.
+See [Development](../../development/architecture) for instructions on how to add custom files to the references.
 
 ## Docker images
 
@@ -98,8 +98,8 @@ tpoboot-<$BOOT_VER>                          mctp-gce                           
 
 There are three uses for this GCP instance image:
 - building TPO references (covered next)
-- launching TPO pipelines on GCP (see: [Usage](Usage))
-- starting a TPO instance for debugging and development (see: [Development](Development#gcp-instance))
+- launching TPO pipelines on GCP (see: [Usage](../../usage/cli))
+- starting a TPO instance for debugging and development (see: [Development](../../development/architecture#gcp-images))
 
 ## Building TPO work disc
 

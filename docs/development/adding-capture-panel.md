@@ -1,3 +1,5 @@
+# Adding Capture Panel
+
 To add a capture panel, use the `scripts/add_capture_panel.R` script. You will need:
 * The targets bed file of the panel to add
 * A (optional) bed file containing regions to exclude (i.e. genotyping positions that you don't want to annotate against) 

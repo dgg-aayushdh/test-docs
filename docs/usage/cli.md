@@ -8,7 +8,7 @@ TPO is controlled through a single executable shell script `$TPO_ROOT/tpo.sh`. T
 
 ## TPO CLI entrypoint
 
-The `$TPO_ROOT/tpo.sh` entrypoint, referred from now on as `tpo.sh` is, is a simple wrapper around a Python CLI `$TPO_ROOT/tpo.py` implemented using `moke`, see: [Local Installation](Local-Installation). The invocation is the same for all commands.
+The `$TPO_ROOT/tpo.sh` entrypoint, referred from now on as `tpo.sh` is, is a simple wrapper around a Python CLI `$TPO_ROOT/tpo.py` implemented using `moke`, see: [Local Installation](../../setup/local-installation). The invocation is the same for all commands.
 
 ```
 $TPO_ROOT/tpo.sh [log_options] [tpo_options] command [command_options] [arguments...]

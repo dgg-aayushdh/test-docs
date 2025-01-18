@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Analysis Tasks - TPO</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">TPO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../overview/" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setup</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../setup/summary/" class="dropdown-item">Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../../setup/local-installation/" class="dropdown-item">Local Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../../setup/local-build/" class="dropdown-item">Local Build</a>
+</li>
+                                    
+<li>
+    <a href="../../../setup/cloud-deployment/" class="dropdown-item">Cloud Deployment</a>
+</li>
+                                    
+<li>
+    <a href="../../../setup/local-development/" class="dropdown-item">Local Development</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../cli/" class="dropdown-item">TPO Command Line Interface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../configuration/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../configuration/settings-file/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../configuration/genome-support/" class="dropdown-item">Genome-Support</a>
+</li>
+            
+<li>
+    <a href="../../configuration/bcl-barcodes/" class="dropdown-item">BCL-Barcodes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tasks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Analysis Tasks</a>
+</li>
+            
+<li>
+    <a href="../development-tasks/" class="dropdown-item">Development Tasks</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pipelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../pipelines/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+</li>
+            
+<li>
+    <a href="../../pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+</li>
+            
+<li>
+    <a href="../../pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">R Packages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../r-packages/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../r-packages/tpolib/" class="dropdown-item">tpolib</a>
+</li>
+            
+<li>
+    <a href="../../r-packages/codac/" class="dropdown-item">codac</a>
+</li>
+            
+<li>
+    <a href="../../r-packages/cnvex/" class="dropdown-item">cnvex</a>
+</li>
+            
+<li>
+    <a href="../../r-packages/carat/" class="dropdown-item">carat</a>
+</li>
+            
+<li>
+    <a href="../../r-packages/caniq/" class="dropdown-item">caniq</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Shiny Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../shiny-apps/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../shiny-apps/curve/" class="dropdown-item">curve</a>
+</li>
+            
+<li>
+    <a href="../../shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+</li>
+            
+<li>
+    <a href="../../shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Output</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../output/somatic-variants/" class="dropdown-item">Somatic Variants</a>
+</li>
+                                    
+<li>
+    <a href="../../../output/silos-and-vaults/" class="dropdown-item">Silos and Vaults</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../development/architecture/" class="dropdown-item">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/repository/" class="dropdown-item">Repository</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/updating-references/" class="dropdown-item">Updating References</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/updating-ensembl/" class="dropdown-item">Updating Ensembl</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/updating-panel-of-normals/" class="dropdown-item">Updating Panel-of-Normals</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/unit-testing/" class="dropdown-item">Unit Testing</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/adding-tasks/" class="dropdown-item">Adding Tasks</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/adding-capture-panel/" class="dropdown-item">Adding Capture Panel</a>
+</li>
+                                    
+<li>
+    <a href="../../../development/use-tpo-in-local-mode/" class="dropdown-item">Use TPO in Local Mode</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Notes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../notes/overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../../notes/circos/" class="dropdown-item">circos</a>
+</li>
+                                    
+<li>
+    <a href="../../../notes/examples/" class="dropdown-item">Examples</a>
+</li>
+                                    
+<li>
+    <a href="../../../notes/misc/" class="dropdown-item">Misc</a>
+</li>
+                                    
+<li>
+    <a href="../../../notes/integrative-analysis/" class="dropdown-item">Integrative Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../../notes/use-cases/" class="dropdown-item">Use Cases</a>
+</li>
+                                    
+<li>
+    <a href="../../../notes/variant-and-feature-manual-review/" class="dropdown-item">Variant & Feature Manual Review</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../overview/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../development-tasks/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#getting-help-from-the-cli" class="nav-link">Getting help from the CLI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#bcl" class="nav-link">bcl</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#cords" class="nav-link">cords</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#cords_align" class="nav-link">cords_align</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_unalign" class="nav-link">cords_unalign</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_postalign" class="nav-link">cords_postalign</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_misc" class="nav-link">cords_misc</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_germline" class="nav-link">cords_germline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_somatic" class="nav-link">cords_somatic</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_structural" class="nav-link">cords_structural</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cords_cnvex" class="nav-link">cords_cnvex</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#crisp" class="nav-link">crisp</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#crisp_align" class="nav-link">crisp_align</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#crisp_codac" class="nav-link">crisp_codac</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#crisp_quant" class="nav-link">crisp_quant</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#crisp_quasr" class="nav-link">crisp_quasr</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#crisp_germline" class="nav-link">crisp_germline</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#carat" class="nav-link">carat</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#carat_anno" class="nav-link">carat_anno</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#carat_report" class="nav-link">carat_report</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="getting-help-from-the-cli">Getting help from the CLI</h1>
+<p>The task CLI is implemented using <code>moke</code> and is self-documenting. The following command can be used obtain up-to-date help for each of the tasks:</p>
+<pre><code>tpotask.sh &lt;task_name&gt; -h
+</code></pre>
+<h1 id="bcl"><code>bcl</code></h1>
+<h3 id="purpose">Purpose</h3>
+<p>Runs Illumina <code>bcl2fastq</code> to generate <code>fastq</code> files.</p>
+<h3 id="inputs">Inputs</h3>
+<ul>
+<li><code>id</code> Unique run identifier (e.g. "CDMHAANXX")</li>
+<li><code>tar</code> A tar archive of the instrument's output.</li>
+<li><code>lib</code> A tab delimited text file containing the Flowcell / Library / Lane / Barcode information, e.g.</li>
+</ul>
+<pre><code>Flowcell    Library Lane    Barcode
+HCKNVDRXX   SI_25872    1   C1[Usage](Usage)
+HCKNVDRXX   SI_25873    1   C2
+HCKNVDRXX   SI_25874    1   C3
+HCKNVDRXX   SI_25875    1   C4
+HCKNVDRXX   SI_25876    1   C5
+HCKNVDRXX   SI_25877    1   C6
+</code></pre>
+<h3 id="output">Output</h3>
+<p>In <code>$WORK_BUCKET/repo/bcl/&lt;id&gt;</code>:
+* Renamed <code>fastq</code> files
+* <code>config.txt</code> containing the run parameters </p>
+<h1 id="cords"><code>cords</code></h1>
+<h2 id="cords_align"><code>cords_align</code></h2>
+<h3 id="purpose_1">Purpose</h3>
+<p>Align short-read DNA data to a reference genome.</p>
+<h3 id="input">Input</h3>
+<ul>
+<li><code>id</code> Unique run identifier </li>
+<li><code>sample</code> What to put in the <code>SM</code> of read group, important for variant calling.</li>
+<li><code>fq1</code> and <code>fq2</code> The <code>fastq</code> files, possibly from <code>bcl</code> output</li>
+</ul>
+<h3 id="output_1">Output</h3>
+<p>In <code>$WORK_BUCKET/repo/cords_tnscope/&lt;id&gt;</code>:
+* <code>&lt;id&gt;-aligstat.txt</code> The alignment statistics (like Picard <code>AlignmentSummary</code>)
+* <code>&lt;id&gt;.cram</code> The aligned file
+* <code>&lt;id&gt;-genotype.csv</code> and <code>&lt;id&gt;-genotype.csv</code> Results of the genotyping
+* other summary files (open-source version outputs four additional figures to sentieon version, i.e. <code>meanqual.pdf</code>, <code>qualdist.pdf</code>, <code>gcbias.pdf</code> and <code>isize.pdf</code>)</p>
+<h3 id="note-for-open-source-version">Note for open-source version</h3>
+<ul>
+<li>Indel realignment is no longer supported by GATK4 since 2016 when GATK was versioned 3.6. This step has not been required by HaplotypeCaller or Mutect2 because they implement a more sophisticated and effective form of realignment. See the <a href="https://github.com/broadinstitute/gatk-docs/blob/master/blog-2012-to-2019/2016-06-21-Changing_workflows_around_calling_SNPs_and_indels.md?id=7847">post</a>.</li>
+<li>Only calculate BQSR table, but may not plot it.</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code>/mctp/users/rebernrj/projects/tpo/mokefile.py -config /mctp/users/rebernrj/projects/tpo-mctp-config/projects/mCRPC/v1.4/mokefile_onco1500v6a_grch38-tpo_1.4.txt cords_align SI_31707_H5L3CDRXY_1 SI_31707 gs://mctp-fastq/H5L3CDRXY/mctp_SI_31707_H5L3CDRXY_1_1.fq.gz gs://mctp-fastq/H5L3CDRXY/mctp_SI_31707_H5L3CDRXY_1_2.fq.gz --nowait --preemptible -work_disk 500G
+</code></pre>
+<h2 id="cords_unalign"><code>cords_unalign</code></h2>
+<h3 id="purpose_2">Purpose</h3>
+<p>Create <code>fastq</code> files from a BAM file (lossless).</p>
+<h3 id="input_1">Input</h3>
+<ul>
+<li><code>id</code> Unique run identifier</li>
+<li><code>aln</code> Input BAM file</li>
+</ul>
+<h3 id="output_2">Output</h3>
+<h2 id="cords_postalign"><code>cords_postalign</code></h2>
+<h3 id="purpose_3">Purpose</h3>
+<p>Deduplicate, post-process and optionally combine multiple <code>cords-align</code> inputs into one <code>bam</code> file ready for variant calling and other downstream analyses.</p>
+<h3 id="input_2">Input</h3>
+<ul>
+<li><code>id</code> Unique run identifier</li>
+<li><code>aln</code> Input <code>cords-align</code> folders.</li>
+</ul>
+<h3 id="output_3">Output</h3>
+<h3 id="example_1">Example</h3>
+<pre><code># single aligned file
+/mctp/users/rebernrj/projects/tpo/mokefile.py -config /mctp/users/rebernrj/projects/tpo-mctp-config/projects/mCRPC/v1.4/mokefile_onco1500v6a_grch38-tpo_1.4.txt cords_postalign SI_31707_H5L3CDRXY gs://mctp-ryan/mioncoseq/mCRPC/repo/cords-align/SI_31707_H5L3CDRXY_1/ --nowait --preemptible
+
+# multiple aligned files
+/mctp/users/rebernrj/projects/tpo/mokefile.py -config /mctp/users/rebernrj/projects/tpo-mctp-config/projects/mCRPC/v1.4/mokefile_agilentv4_grch38-tpo_1.4.txt cords_postalign SI_30539 'gs://mctp-data/internal/repo/cords-align/SI_30539-HT2KGDMXX-1/;gs://mctp-data/internal/repo/cords-align/SI_30539-HT2KGDMXX-2/' --nowait --preemptible
+
+</code></pre>
+<h2 id="cords_misc"><code>cords_misc</code></h2>
+<p>Miscellaneous analyses for quality control and evaluation of DNA post-alignments.</p>
+<h3 id="purpose_4">Purpose</h3>
+<h3 id="input_3">Input</h3>
+<h3 id="output_4">Output</h3>
+<h2 id="cords_germline"><code>cords_germline</code></h2>
+<h3 id="purpose_5">Purpose</h3>
+<p>Calls variants from a tumor and optional normal sample pair.</p>
+<h3 id="input_4">Input</h3>
+<h3 id="output_5">Output</h3>
+<h2 id="cords_somatic"><code>cords_somatic</code></h2>
+<h3 id="purpose_6">Purpose</h3>
+<p>Calls variants from a tumor and optional normal sample pair.</p>
+<h3 id="input_5">Input</h3>
+<h3 id="output_6">Output</h3>
+<h2 id="cords_structural"><code>cords_structural</code></h2>
+<h3 id="purpose_7">Purpose</h3>
+<p>Calls structural variants from a tumor and optional normal sample pair.</p>
+<h3 id="input_6">Input</h3>
+<h3 id="output_7">Output</h3>
+<h2 id="cords_cnvex"><code>cords_cnvex</code></h2>
+<h3 id="purpose_8">Purpose</h3>
+<p>Identify copy number alterations from whole-genome, whole-exome or targeted panel sequencing.</p>
+<h3 id="input_7">Input</h3>
+<ul>
+<li><code>id</code>  Unique run identifier</li>
+<li><code>alnn</code> and <code>alnt</code> The outputs of <code>cords-postalign</code> for normal and tumor</li>
+<li><code>tvar</code> or <code>gvar</code> The output of <code>cords-somatic</code></li>
+<li><code>cnvx</code> An existing <code>cords-cnvex</code> run (alternative)</li>
+</ul>
+<h3 id="output_8">Output</h3>
+<p>In <code>$WORK_BUCKET/repo/cords_cnvex/&lt;id&gt;</code>:
+* A <code>model</code> object which is a list of 4 objects with a complex structure.</p>
+<h3 id="usage">Usage</h3>
+<p>The operation of <code>cords_cnvex</code> is controlled by multiple parameters in the TPO <code>config</code> file, the CNVEX settings file, and which of the inputs were provided. In general, CNVEX tries to do as much as possible with the data provided. CNVEX can do somatic (tumor) and/or germline (normal) copy-number analysis. For germline analysis a germline BAM file needs to be provided as <code>alnn</code>. VCF variant files can originate either from targeted sequencing (e.g. whole-exome, <code>tvar</code>) or genomic sequencing (<code>gvar</code>) and can contain either one sample in tumor-only mode or two samples paired (tumor-normal) analysis mode. In tumor-only mode CNVEX can take advantage of a pool of unrelated normal samples (which needs to be constructed separately), can also be used for the analysis of the normal sample.</p>
+<p>The CNVEX algorithm consists of three stages:</p>
+<ol>
+<li>Input data processing. At this step the files provided in through <code>alnt</code>, <code>alnn</code>, <code>tvar</code>, and <code>gvar</code> are transformed into a <code>cnvx</code> object. Only the <code>alnt</code> input is required all other are optional. However, if no variants are provided (i.e. <code>tvar</code> or <code>gvar</code>) only a limited analysis will be performed. Alternatively, if none of the input <code>BAM</code> and <code>VCF</code> files are provided, but a previous <code>cnvx</code> run is provided it will be re-processed. This allows previous CNVEX results to be updated using a newer code version or new settings.</li>
+<li>Data segmentation. At this stage the genome is being partitioned into segments of (hopefully) constant copy-number (<code>C</code>) and B-allele frequency (<code>BAF</code>).</li>
+<li>Copy-number purity/ploidy model search. This step comprises of data segmentation and model search. This process proceeds separately for the somatic (tumor) and germline (normal) component of the data. It results in multiple files being created.</li>
+</ol>
+<h1 id="crisp"><code>crisp</code></h1>
+<p>CRISP stands for 'Clinical RNA Sequencing Interpretation Platform' it comprises of a comprehensive set of pipelines for the analysis of short-read paired-end RNA-seq data.</p>
+<p>CRISP performs three separate alignments to maximize the number of aligned chimeric reads used for fusion calling by CODAC. The first alignment, resulting in "*alig.cram" disables chimeric alignment all together, as a result this file only contains linearly-aligned reads. This file is used for gene expression quantification, QC, etc. The two other files disable linear alignment and perform chimeric alignment. Two chimeric files are created because STAR is run separately on overlapping read pairs (SE - long single end reads derived from overlapping paired-end reads), and non-overlapping read pairs (PE).
+IMPORTANT: none of the CRISP produced files contains all the reads (they are split into alig, chim-pe, chim-se, unaligned), I strongly recommend using FASTQ for long-term storage and exchange</p>
+<h2 id="crisp_align"><code>crisp_align</code></h2>
+<h3 id="purpose_9">Purpose</h3>
+<p>Align paired-end short RNA-seq data to a reference genome.</p>
+<h3 id="input_8">Input</h3>
+<h3 id="output_9">Output</h3>
+<p>Outputs include:</p>
+<ul>
+<li><FILE_ROOT_NAME>-alig.cram - Linearly aligned reads. This output results from a process that disables chimeric alignment all together, as a result this file only contains linearly-aligned reads. Index files are also created as <em>bai and </em>crai as well as an associated log file as *log.</li>
+<li><FILE_ROOT_NAME>-chim-pe.cram - Chimeric alignment results from non-overlapping read pairs. Index files are also created as <em>bai and </em>crai. Index files are also created as <em>bai and </em>crai as well as an associated log file as *log.</li>
+<li><FILE_ROOT_NAME>-chim-se.cram - Chimeric alignment results from overlapping read pairs. Index files are also created as <em>bai and </em>crai as well as an associated log file as *log.</li>
+<li><FILE_ROOT_NAME>-unmapped_1.fq.gz - Unmapped FASTQ from direction 1.</li>
+<li><FILE_ROOT_NAME>-unmapped_2.fq.gz- Unmapped FASTQ from direction 2.</li>
+</ul>
+<h2 id="crisp_codac"><code>crisp_codac</code></h2>
+<h3 id="purpose_10">Purpose</h3>
+<p>Identify Fusions from aligned RNA-seq data.</p>
+<h3 id="input_9">Input</h3>
+<h3 id="output_10">Output</h3>
+<h2 id="crisp_quant"><code>crisp_quant</code></h2>
+<h3 id="purpose_11">Purpose</h3>
+<p>Quantify RNA abundance using alignment-free techniques.</p>
+<h3 id="input_10">Input</h3>
+<h3 id="output_11">Output</h3>
+<h2 id="crisp_quasr"><code>crisp_quasr</code></h2>
+<h3 id="purpose_12">Purpose</h3>
+<p>Quantify RNA abundances from short-reads using standard alignment techniques.</p>
+<h3 id="input_11">Input</h3>
+<h3 id="output_12">Output</h3>
+<h2 id="crisp_germline"><code>crisp_germline</code></h2>
+<h3 id="purpose_13">Purpose</h3>
+<p>Call variants in aligned RNA-seq data implementing the GATK4 strategy.</p>
+<h3 id="input_12">Input</h3>
+<h3 id="output_13">Output</h3>
+<h1 id="carat"><code>carat</code></h1>
+<p>CARAT stands for 'Comprehensive Annotation and Reporting of Aberrations in Tumors' it comprises pipelines which interpret, annotate, filter, summarize and aggregate genomic results as standardized outputs.</p>
+<h2 id="carat_anno"><code>carat_anno</code></h2>
+<h3 id="purpose_14">Purpose</h3>
+<p>Annotation and interpretation of variants detected by any of the <code>cords</code> pipelines.</p>
+<h3 id="input_13">Input</h3>
+<h3 id="output_14">Output</h3>
+<h2 id="carat_report"><code>carat_report</code></h2>
+<h3 id="purpose_15">Purpose</h3>
+<p>Aggregation and standardized reporting of results from <code>cords</code>, <code>carat</code>, and <code>crisp</code> pipelines.</p>
+<h3 id="input_14">Input</h3>
+<h3 id="output_15">Output</h3></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

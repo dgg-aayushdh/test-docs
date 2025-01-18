@@ -1,8 +1,8 @@
 # Run Cords analysis locally
 ## step1. Configurate Runtime
-Please follow the instructions on page [Installation](Installation).
+Please follow the instructions on page [Installation](../../setup/local-installation).
 ## step2. Modify runtime setting in config file
-Please follow the instructions on page [runtime-local-mode](Configuration#runtime-local-mode).
+Please follow the instructions on page [runtime-local-mode](../../usage/configuration/overview#runtime-local-mode).
 ## Step3. Add `--local` in running command. Examples:
 ### align
 ```

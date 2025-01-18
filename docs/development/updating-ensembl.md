@@ -34,9 +34,12 @@ We now have a set GCP instance image with the updated Docker images.
 ## 3. Create Updated reference files
 
 1. Download and Ungzip the following files, replacing 106 with the desired version
- - http://ftp.ensembl.org/pub/release-106/variation/vep/homo_sapiens_merged_vep_106_GRCh38.tar.gz
- - http://ftp.ensembl.org/pub/release-106/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz
- - http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz
+
+ - [http://ftp.ensembl.org/pub/release-106/variation/vep/homo_sapiens_merged_vep_106_GRCh38.tar.gz](http://ftp.ensembl.org/pub/release-106/variation/vep/homo_sapiens_merged_vep_106_GRCh38.tar.gz)
+ 
+ - [http://ftp.ensembl.org/pub/release-106/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz](http://ftp.ensembl.org/pub/release-106/fasta/homo_sapiens/cdna/Homo_sapiens.GRCh38.cdna.all.fa.gz)
+ 
+ - [http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz](http://ftp.ensembl.org/pub/release-106/gtf/homo_sapiens/Homo_sapiens.GRCh38.106.gtf.gz)
 2. Fix GTF file by combining multiple `tag` features into one `tags` feature
 ```
 cat Homo_sapiens.GRCh38.108.gtf | scripts/make_gtf_tags.py fix_tags > Homo_sapiens.GRCh38.108-tags.gtf
@@ -53,7 +56,7 @@ If it fails or gives warnings it means the structure of the GTF file changed, do
 
 We will use the new `tpoboot` instance image to build a new `tporoot` with the updated reference files
 
-1. Copy all new and updated files in the right places.
+ - Copy all new and updated files in the right places.
 ```
 # original GTF file
 cp Homo_sapiens.GRCh38.108.gtf $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.gtf
@@ -63,12 +66,13 @@ cp Homo_sapiens.GRCh38.108.clean.gtf $XXX/v2/refs/refs/grch38/ensembl/grch38.108
 cp Homo_sapiens.GRCh38.108.cdna.clean.fa $XXX/v2/refs/refs/grch38/ensembl/grch38.108.all.cdna.fa
 ## VEP file
 cp homo_sapiens_merged_vep_108_GRCh38.tar.gz $XXX/v2/refs/refs/grch38/ensembl/grch38.108.merged.vep.tar
-``
-2. Push updated reference files to the cloud using `refs_push`
-3. Build updated `tporoot` image.
+```
+ - Push updated reference files to the cloud using `refs_push`
+ - Build updated `tporoot` image.
     - Update `ROOT_VER` to newer version reflecting update of both `BOOT_VER` and bump in Ensemble version, e.g. 
       ```
       ROOT_VER = 2.5-0-grch38-tpo-108
       ```
     - Trigger build of new `tporoot` GCP image using `gcp_root_build`
+
 

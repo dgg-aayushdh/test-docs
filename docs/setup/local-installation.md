@@ -3,7 +3,7 @@
 TPO is designed ground-up to work on the Google Cloud and uses [Sentieon](https://www.sentieon.com/products/) tools to accelerate and improve some analyses. Optionally, TPO can be run locally, which is recommended for development and debugging purposes, and utilize only open-source tools.
 
 This section describes the process of instaling the TPO CLI on a local machine. Additional steps are required to enable the local execution
-of TPO pipelines either remotely (default) or [Cloud Deployment](Cloud-Deployment), or locally [Local Deployment](Local-Deployment). 
+of TPO pipelines either remotely (default) or [Cloud Deployment](../cloud-deployment), or locally [Local Deployment](../local-development). 
 
 ## Required software
 
@@ -109,11 +109,11 @@ GCP account is required for TPO to run in the cloud, and Sentieon license is ess
     - reading from and writing to GCP buckets using the [gsutil](https://cloud.google.com/storage/docs/gsutil) tool.
     - (optionally) creating an GCP [File Store](https://cloud.google.com/filestore) NFS share.
 
-The custom GCP information and settings should be provided to TPO via the configuration file `<config.ini>`. Please refer to [Configuration](Configuration#GCP) for details on how to configure TPO and a GCP project.
+The custom GCP information and settings should be provided to TPO via the configuration file `<config.ini>`. Please refer to [Configuration](../../usage/configuration/overview) for details on how to configure TPO and a GCP project.
 
 ### Sention license
 
-Secure a license file from [Sentieon](https://www.sentieon.com/). A [free-trial](https://www.sentieon.com/home/free-trial/) is available.
+Secure a license file from [Sentieon](https://www.sentieon.com/). A [free-trial](https://www.sentieon.com/free-trial/) is available.
 
 The Sentieon software license file (or license server) should be provided to TPO via the configuration file `<config.ini>`. Please refer [here](QuickStart#Sentieon) for details on how to configure TPO to use Sentieon license server or license file.
 

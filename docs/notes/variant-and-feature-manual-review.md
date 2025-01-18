@@ -1,4 +1,6 @@
-### Purpose: 
+#Variant and feature manual review
+
+## Purpose: 
 The purpose of this page is to introduce a reliable and reproducible means of QC'ing variants and features for metavaults. Specifically this page will outline how:
 1.  Variants can be manually examined and re-triaged following use of the default triage functions.
 2.  Samples can be classified on the feature level (i.e. SPOP-mutant, WNT-altered, etc.)
@@ -8,7 +10,7 @@ The functions that the code below leverages are stored primarily in `/tpo/rlibs/
 
 
 
-### Variant-level review
+## Variant-level review
 
 
 1.  Load and run default triaging
@@ -80,7 +82,7 @@ ddtmvf <- dxRescueVariants(ddtmvf, TBL)
 
 
 
-### Feature-level review
+## Feature-level review
 
 1.  Manually review on the feature level. This is where you can review the evidence across data types with your manually reviewed variants to make feature level calls (i.e. APC-mutant, HRD-mutant).  
 ```

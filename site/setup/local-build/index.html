@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Local Build - TPO</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">TPO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../overview/" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setup</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../summary/" class="dropdown-item">Summary</a>
+</li>
+                                    
+<li>
+    <a href="../local-installation/" class="dropdown-item">Local Installation</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Local Build</a>
+</li>
+                                    
+<li>
+    <a href="../cloud-deployment/" class="dropdown-item">Cloud Deployment</a>
+</li>
+                                    
+<li>
+    <a href="../local-development/" class="dropdown-item">Local Development</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/cli/" class="dropdown-item">TPO Command Line Interface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/configuration/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/settings-file/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/genome-support/" class="dropdown-item">Genome-Support</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/bcl-barcodes/" class="dropdown-item">BCL-Barcodes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tasks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/tasks/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/analysis-tasks/" class="dropdown-item">Analysis Tasks</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/development-tasks/" class="dropdown-item">Development Tasks</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pipelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/pipelines/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">R Packages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/r-packages/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/tpolib/" class="dropdown-item">tpolib</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/codac/" class="dropdown-item">codac</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/cnvex/" class="dropdown-item">cnvex</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/carat/" class="dropdown-item">carat</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/caniq/" class="dropdown-item">caniq</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Shiny Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/shiny-apps/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/curve/" class="dropdown-item">curve</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Output</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../output/somatic-variants/" class="dropdown-item">Somatic Variants</a>
+</li>
+                                    
+<li>
+    <a href="../../output/silos-and-vaults/" class="dropdown-item">Silos and Vaults</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/architecture/" class="dropdown-item">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../development/debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../../development/repository/" class="dropdown-item">Repository</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-references/" class="dropdown-item">Updating References</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-ensembl/" class="dropdown-item">Updating Ensembl</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-panel-of-normals/" class="dropdown-item">Updating Panel-of-Normals</a>
+</li>
+                                    
+<li>
+    <a href="../../development/unit-testing/" class="dropdown-item">Unit Testing</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-tasks/" class="dropdown-item">Adding Tasks</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-capture-panel/" class="dropdown-item">Adding Capture Panel</a>
+</li>
+                                    
+<li>
+    <a href="../../development/use-tpo-in-local-mode/" class="dropdown-item">Use TPO in Local Mode</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Notes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../notes/overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/circos/" class="dropdown-item">circos</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/examples/" class="dropdown-item">Examples</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/misc/" class="dropdown-item">Misc</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/integrative-analysis/" class="dropdown-item">Integrative Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/use-cases/" class="dropdown-item">Use Cases</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/variant-and-feature-manual-review/" class="dropdown-item">Variant & Feature Manual Review</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../local-installation/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../cloud-deployment/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#references" class="nav-link">References</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#docker-images" class="nav-link">Docker images</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#google-cloud-platform-instance-image" class="nav-link">Google Cloud Platform (instance) image</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#building-tpo-work-disc" class="nav-link">Building TPO work disc</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#building-tpo-references" class="nav-link">Building TPO references</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="overview">Overview</h2>
+<p>This section will detail the steps necessary to make TPO operational in the GCP cloud and locally. The purpose of this process is to create two GCP images: one bootable instance image <code>tpoboot</code> and one reference image <code>tporoot</code>. Together these two GCP images are used to launch GCP instances which will execute a TPO pipeline on the cloud.</p>
+<p>Important variables:
+- <code>BOOT_VER</code> is the version of the TPO docker images and the GCP instance image
+- <code>ROOT_VER</code> is the version of the GCP image containing the TPO static and dynamic references
+- <code>TPO_ROOT</code> is the root directory of the TPO source tree
+- <code>config.ini</code> is a config file based on a copy of a template in <code>$TPO_ROOT/config</code> </p>
+<h2 id="references">References</h2>
+<p>Not all files necessary for the execution of a genomic pipeline can be kept in a git repository, such as reference genomes, gene models, large annotation files etc, custom software etc., due to their size. TPO stores such reference files in a GCP bucket. These files are used in two scenarios: when building Docker images, and when building the GCP instance image <code>tporoot</code> (see below).</p>
+<p>The first step in the building of TPO is to pull the reference files locally. To do this, update the <code>config.ini</code> file:</p>
+<pre><code>[RUNTIME]
+WORK = &lt;directory&gt;
+REFS = &lt;directory&gt;
+</code></pre>
+<p>The <code>WORK</code> directory is required. If <code>WORK</code> is provided but <code>REFS</code> is blank, <code>REFS</code> defaults to <code>$WORK/refs</code>, otherwise <code>REFS</code> should be a directory both the <code>user</code> and <code>root</code> have read-write access to.</p>
+<p>Next, execute the following command to pull references and indexes from GCP bucket to local directory:</p>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini refs_pull
+</code></pre>
+<p>Depending on the internet connection this may take some time (10+ minutes). A total of 50-100GB will be downloaded.</p>
+<p>See <a href="Development#References">Development</a> for instructions on how to add custom files to the references.</p>
+<h2 id="docker-images">Docker images</h2>
+<p>Once the reference files have been pulled it is possible to build the required Docker images.</p>
+<p>First, the <code>config.ini</code> file needs to be edited, to specify <code>BOOT_VER</code> a version number which will be used to tag the docker images e.g. <code>tpobase:$BOOT_VER</code>. The same version number will be later used to tag the GCP boot image <code>tpoboot:$BOOT_VER</code> (see below).</p>
+<pre><code>[TPO]
+BOOT_VER = &lt;version number&gt;
+</code></pre>
+<p>The version number above can be anything e.g. <code>0.0.1-rel1</code>. Once it is set we can build the Docker images:</p>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini boot_build
+</code></pre>
+<p>This command takes two optional parameters 
+- <code>--nocache</code> to build the images from scratch and drop the docker build cache. Equivalent to the <code>--no-cache</code> argument in docker <a href="https://docs.docker.com/engine/reference/commandline/build">build</a>.
+- <code>-image &lt;image_name&gt;</code> to specify which image to build (among <code>base</code>, <code>cords</code>, <code>crisp</code>, <code>carat</code>) default: all</p>
+<p>Depending on the local machine performance building the images will take up to 30min. The process will result in the creation of four images versioned by <code>$BOOT_VER</code>.</p>
+<pre><code>$ docker images
+REPOSITORY                 TAG         IMAGE ID       CREATED        SIZE
+gcr.io/mctp-gce/tpocarat   &lt;$BOOT_VER&gt;   8d135b36df60   0 days ago     12GB
+gcr.io/mctp-gce/tpocrisp   &lt;$BOOT_VER&gt;   603db1bf58f6   0 days ago     11.7GB
+gcr.io/mctp-gce/tpocords   &lt;$BOOT_VER&gt;   1a0efa23bc63   0 days ago     11.9GB
+gcr.io/mctp-gce/tpobase    &lt;$BOOT_VER&gt;   f19a24294dc7   0 days ago     10.7GB
+</code></pre>
+<p>Note: the IMAGE IDs and SIZEs will differ based on the time point the images are created.</p>
+<h2 id="google-cloud-platform-instance-image">Google Cloud Platform (instance) image</h2>
+<p>When TPO is being run on the GCP, the pipeline code is executed within a docker container which is running one of the docker images created above. Since these images are quite bulky it is not efficient to pull them (i.e. <code>docker pull &lt;image&gt;</code>) prior to running each execution. Therefore, we will prepare a custom GCP Instance <a href="https://cloud.google.com/compute/docs/images#custom_images">image</a> with all of the images pre-loaded.</p>
+<p>The whole process is comprised of three steps:</p>
+<ol>
+<li>Push local docker images to the Google Container Registry (GCR)</li>
+<li>Pull docker images from the GCR to a GCP instance</li>
+<li>Save the updated GCP instance as a GCP image</li>
+</ol>
+<p>The above steps translate into two fully-automated commands:</p>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini boot_push
+</code></pre>
+<p>This command will push the local images that were just built. You can go to https://console.cloud.google.com/gcr/images, then select your project from the drop-down list in the upper left corner, and see if your local docker images were successfully uploaded to GCR.</p>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini gcp_boot_build
+</code></pre>
+<p>The second command will automatically perform a series of steps: start a GCP instance, pull docker images, create GCP image from instance. By default, the <code>gcp_boot_build</code> command will wait (issuing periodic updates) until all of those steps have been completed. This command should not be interrupted, as it will leave the build-process in a broken state. The process should not take more than 15 minutes.</p>
+<p>We can check for success by searching for the instance image on GCP: </p>
+<pre><code>$ gcloud compute images list | grep tpoboot
+tpoboot-&lt;$BOOT_VER&gt;                          mctp-gce                                                           READY
+</code></pre>
+<p>There are three uses for this GCP instance image:
+- building TPO references (covered next)
+- launching TPO pipelines on GCP (see: <a href="Usage">Usage</a>)
+- starting a TPO instance for debugging and development (see: <a href="Development#gcp-instance">Development</a>)</p>
+<h2 id="building-tpo-work-disc">Building TPO work disc</h2>
+<p>Running instances require working disk space to store input, temporary, and output files. These disks are created from the <code>work</code> image, which is a formatted (ext4) GCP image that is automatically resized when an instance is launched. Having a pre-formatted empty image saves time when launching instances, as initializing and formatting large images takes a lot of time.</p>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini gcp_work_build
+</code></pre>
+<h2 id="building-tpo-references">Building TPO references</h2>
+<p>Running TPO pipelines both locally and on the GCP requires access to a large number of reference files (e.g. reference gnomes, annotations), but even more importantly large indexes for read alignment and quantification. These indexes take many hours to build and require significant compute resources. Typically it is not possible to build those references on a standard desktop, therefore we need to build the references on the GCP. Hence unlike docker images which we build locally and push to the cloud, we build the references locally and optionally pull them locally.</p>
+<p>Building TPO references is carried out by one command <code>gcp_refs_build</code>, which automates the following steps:</p>
+<ol>
+<li>Launch a GCP instance based on the <code>tpoboot-$BOOT_VER</code> image (analogous to <code>gcp_instance</code>)</li>
+<li>Download the static reference files (analogous to <code>refs_pull</code>)</li>
+<li>Build (indexing, compilation) dynamic reference files</li>
+<li>Save the updated references as a GCP image</li>
+</ol>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini gcp_refs_build
+</code></pre>
+<p>The above command will build a GCP instance image versioned by <code>$ROOT_VER</code> i.e. <code>tporoot-$ROOT_VER</code>. The process takes 4h or more hours to complete.</p>
+<p>We can check for success by searching for the instance image on GCP: </p>
+<pre><code>$ gcloud compute images list | grep tporoot
+tporoot-&lt;$ROOT_VER&gt;                         mctp-gce                                                           READY
+</code></pre>
+<p>TPO is fully operational on the GCP once <code>tporoot-$ROOT_VER</code> (and previously <code>tpoboot-$BOOT_VER</code>) has been successfully created. To operate TPO locally the contents of <code>tporoot-$ROOT_VER</code> have to be downloaded locally. The process involves:</p>
+<ol>
+<li>creating a tar-archive of the contents of the <code>tporoot-$ROOT_VER</code> image</li>
+<li>pushing the tar-archive from a GCP instance to a GCP bucket</li>
+<li>pulling the tar-archive from a GCP bucket to a local instance</li>
+<li>unpacking the contents of the tar-archive</li>
+</ol>
+<p>The first two steps happen on the GCP cloud i.e. an instance is launched which mounts <code>tporoot-$ROOT_VER</code> and creates a tar-archive of its contents, this happens as part of <code>gcp_root_push</code>, the next two steps happen on the local instance as <code>gcp_root_pull</code>.</p>
+<pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini gcp_root_push
+$TPO_ROOT/tpo.py -project config/my_config.ini gcp_root_pull
+</code></pre>
+<p>Warning: because the static and dynamic references stored in <code>tporoot-$ROOT_VER</code> are large, a significant amount of storage (250Gb or more) is required locally for <code>gcp_root_pull</code> to complete. Locally, the contents of the <code>tporoot-$ROOT_VER</code> image will be stored in a directory as specified by the configuration file:</p>
+<pre><code>[RUNTIME]
+ROOT = &lt;path&gt;
+</code></pre>
+<p>Here <code>ROOT</code> should be a directory where the user (and the UNIX <code>root</code>account) have both read-write access to. The whole process of pushing and pulling <code>tporoot-$ROOT_VER</code> locally can take several hours and will largely depend on the local network bandwidth and disk storage performance.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

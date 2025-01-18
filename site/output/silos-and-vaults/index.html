@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Silos and Vaults - TPO</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">TPO</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../overview/" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Setup</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../setup/summary/" class="dropdown-item">Summary</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-installation/" class="dropdown-item">Local Installation</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-build/" class="dropdown-item">Local Build</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/cloud-deployment/" class="dropdown-item">Cloud Deployment</a>
+</li>
+                                    
+<li>
+    <a href="../../setup/local-development/" class="dropdown-item">Local Development</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Usage</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../usage/cli/" class="dropdown-item">TPO Command Line Interface</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Configuration</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/configuration/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/settings-file/" class="dropdown-item">Settings</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/genome-support/" class="dropdown-item">Genome-Support</a>
+</li>
+            
+<li>
+    <a href="../../usage/configuration/bcl-barcodes/" class="dropdown-item">BCL-Barcodes</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Tasks</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/tasks/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/analysis-tasks/" class="dropdown-item">Analysis Tasks</a>
+</li>
+            
+<li>
+    <a href="../../usage/tasks/development-tasks/" class="dropdown-item">Development Tasks</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Pipelines</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/pipelines/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/onco-seq/" class="dropdown-item">OncoSeq</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/wgs-wes/" class="dropdown-item">WGS+WES</a>
+</li>
+            
+<li>
+    <a href="../../usage/pipelines/shallow-wgs/" class="dropdown-item">Shallow WGS</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">R Packages</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/r-packages/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/tpolib/" class="dropdown-item">tpolib</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/codac/" class="dropdown-item">codac</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/cnvex/" class="dropdown-item">cnvex</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/carat/" class="dropdown-item">carat</a>
+</li>
+            
+<li>
+    <a href="../../usage/r-packages/caniq/" class="dropdown-item">caniq</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Shiny Apps</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../usage/shiny-apps/overview/" class="dropdown-item">Overview</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/curve/" class="dropdown-item">curve</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/cnvex-viewer/" class="dropdown-item">cnvex-viewer</a>
+</li>
+            
+<li>
+    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Output</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../somatic-variants/" class="dropdown-item">Somatic Variants</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Silos and Vaults</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../development/architecture/" class="dropdown-item">Architecture</a>
+</li>
+                                    
+<li>
+    <a href="../../development/debugging/" class="dropdown-item">Debugging</a>
+</li>
+                                    
+<li>
+    <a href="../../development/repository/" class="dropdown-item">Repository</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-references/" class="dropdown-item">Updating References</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-ensembl/" class="dropdown-item">Updating Ensembl</a>
+</li>
+                                    
+<li>
+    <a href="../../development/updating-panel-of-normals/" class="dropdown-item">Updating Panel-of-Normals</a>
+</li>
+                                    
+<li>
+    <a href="../../development/unit-testing/" class="dropdown-item">Unit Testing</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-tasks/" class="dropdown-item">Adding Tasks</a>
+</li>
+                                    
+<li>
+    <a href="../../development/adding-capture-panel/" class="dropdown-item">Adding Capture Panel</a>
+</li>
+                                    
+<li>
+    <a href="../../development/use-tpo-in-local-mode/" class="dropdown-item">Use TPO in Local Mode</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Notes</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../notes/overview/" class="dropdown-item">Overview</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/circos/" class="dropdown-item">circos</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/examples/" class="dropdown-item">Examples</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/misc/" class="dropdown-item">Misc</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/integrative-analysis/" class="dropdown-item">Integrative Analysis</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/use-cases/" class="dropdown-item">Use Cases</a>
+</li>
+                                    
+<li>
+    <a href="../../notes/variant-and-feature-manual-review/" class="dropdown-item">Variant & Feature Manual Review</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../somatic-variants/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../development/architecture/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h3 id="introduction">Introduction</h3>
+<p>TPO Silos and Vaults solve two orthogonal problems in the storage, integration, and analysis of genomic data. By necessity genomic pipeline results are produced by a variety of tasks each saving results in a distinct file format. The <code>CARAT</code> packages (located in <code>rlibs/carat</code>), can be thought of as TPOs ETL (Extract Transform Load) solution. It first extracts and collects all the relevant data, this data is stored in a binary <code>Silo</code> object. The following step creates a <code>Vault</code> object represents the transformed data which can be then loaded into a columnar or SQL database.</p>
+<h3 id="motivation">Motivation</h3>
+<p>The idea for <code>dxVaults</code> is two-fold. </p>
+<p>First, the outputs of <code>carat-vault</code> tend to evolve as new functionality is added and bugs being fixed. For example tables are updated with new columns (e.g. the <code>pid</code>, <code>ccf</code>, or support for normal quasr output). Vaults created at different times are not compatible for <code>metaVault</code>. The <code>dtVaultUpdate</code> function updates tables in old formats to the newest format.</p>
+<p>Second, the <code>dtVault</code> fixes some design decisions around legacty <code>vaults</code> / <code>metaVaults</code> allowing us to store all the data - lossless - in an SQL database, such as DuckDB, PostgreSQL and/or SQLite. This enables the use datasets that would not fit otherwise into memory, and the development of web-applications.</p>
+<p>Depending on how the data is accessed and stored (but not what data is stored) there are three types of vaults:</p>
+<ol>
+<li><code>dtVault</code> stored using <code>data.table</code> and accessed either using fast <code>data.table</code> or slow <code>dplyr</code> APIs.</li>
+<li><code>dpVault</code> stored using <code>data.table</code> and accessed using fast <code>dtplyr</code> APIs (i.e. <code>dplyr</code> for data.tables)</li>
+<li><code>dbVault</code> stored using <code>SQL</code> and access using <code>dbplyr</code> APIs (i.e. <code>dplyr</code> for data bases)</li>
+</ol>
+<p>The three interfaces <code>dplyr</code>, <code>dtplyr</code> and <code>dbplyr</code> are very similar. In the current code base we use a mix of <code>data.table</code> and <code>dplyr</code> APIs when using legacy <code>vaults</code> and <code>metaVaults</code>. Universal functions that can work with all vaults have <code>dx</code> prefix.</p>
+<h3 id="quick-start">Quick Start</h3>
+<p><strong>Where is the code</strong></p>
+<pre><code># dxVault* functions (these functions work on all dt/dp/db vaults)
+&lt;TPO_GIT_ROOT&gt;/rlibs/carat/R/dtVault.R
+# dpVault* functions
+&lt;TPO_GIT_ROOT&gt;/rlibs/carat/R/dpVault.R
+# dtVault* function
+&lt;TPO_GIT_ROOT&gt;/rlibs/carat/R/dtVault.R
+# dbVault* functions
+&lt;TPO_GIT_ROOT&gt;/rlibs/carat/R/dbVault.R
+# DuckDB backend
+&lt;TPO_GIT_ROOT&gt;/rlibs/carat/R/duckdb.R
+</code></pre>
+<p><strong>Create <code>dtVaultAnno</code> object</strong></p>
+<p>A <code>dtVault</code> object is stored in a <code>dtVault</code> as <code>$anno</code> it is used in triaging.</p>
+<pre><code>dtanno &lt;- dtVaultAnno(&quot;/tpo/refs/grch38/ensembl/grch38.108.clean.gtf&quot;)
+</code></pre>
+<p>This will create a table with gene-level annotations. This is <code>data.table</code> which links gene_ids, gene_names, chromosomal positional information and columns indicating whether a gene is of interest or an artifact. This function allows providing optional germline and somatic genes-of-interest (GOI), and artifacts: <code>somatic_goi</code>, <code>germline_goi</code>, <code>somatic_art</code>. By default those lists are from corresponding files in the <code>carat/inst/goi</code> directory.</p>
+<p><strong>Create a <code>dtVault</code> from a legacy vault</strong></p>
+<pre><code>vault.fn &lt;- &quot;.../xxx/xxx-vault.rds&quot;
+v &lt;- readRDS(vault.fn)
+dtv &lt;- dtVaultUpdate(v, dtanno)
+</code></pre>
+<p><strong>Create a multi-sample <code>dtVault</code> from a list of legacy vaults</strong></p>
+<pre><code>vault.fns &lt;- ...
+vs &lt;- lapply(vault.fns, readRDS)
+dtvs &lt;- lapply(vs, dtVaultUpdate, dtanno)
+dtv &lt;- dtVaultStack(dtvs)
+</code></pre>
+<p><strong>Create a <code>dbVault</code> from a multi-sample <code>dtVault</code></strong></p>
+<pre><code>createDuckDBFromVault(&quot;test-vault-db.duckdb&quot;, dtv)
+con &lt;- dbConnect(duckdb::duckdb(), dbdir = &quot;test-vault-db.duckdb&quot;, read_only = FALSE)
+dbv &lt;- dbVault(con)
+
+</code></pre>
+<p><strong>Create a <code>dbVault</code> directly from multiple legacy vault files</strong></p>
+<pre><code>vault.fns &lt;- ...
+createDuckDBFromVaultFiles(&quot;test-vault-db2.duckdb&quot;, vault.fns, dtanno)
+</code></pre>
+<p><strong>Convert a <code>dbVault</code> into a <code>dtVault</code></strong></p>
+<pre><code>dtv &lt;- dtVaultCollect(dbv)
+</code></pre>
+<h3 id="variant-triaging-and-filtering">Variant Triaging and Filtering</h3>
+<p>Triaging and filtering of <code>dxVaults</code> is a two step process, giving the user the flexibility to define which tables to triage, and which how to filter variants based on the triaging result. </p>
+<ol>
+<li><code>vaultTriage</code> applies triaging functions to the provided <code>dxVault</code>. This updates (optionally in-place) the <code>triage</code> column with a string representing the triage result i.e. <code>PASS</code> or as a semi-colon delimited string <code>problemX;problemY</code>.</li>
+<li><code>vaultFilter</code> select variants that do not match a set of filtering rules. This returns a new <code>dxVault</code></li>
+</ol>
+<p>default rules:</p>
+<pre><code>#'   list(
+#'     somatic=&quot;annotation|consequence|evidence|artifact&quot;,
+#'     germline=&quot;annotation|consequence|evidence|goi&quot;,
+#'     structural=&quot;evidence&quot;,
+#'     fusion=&quot;evidence&quot;
+#'   )
+</code></pre>
+<p>If the above rule-set is provided, <code>vaultFilter</code> will remove <code>germline</code> variants that with the <code>annotation</code>, <code>consequence</code>, <code>evidence</code> and <code>goi</code> problems, but <code>structural</code> variants will be only filtered based on <code>evidence</code>.</p>
+<pre><code>## subset dbv to only have variants related to RBM10 and convert into a dtVault
+dtv.rbm10 &lt;- dbv |&gt; dxVaultSubsetByGene(&quot;RBM10&quot;) |&gt; dbVaultCollect()
+## triage the subsetted dtVault (but triaging can also be done on the complete dbVault)
+## by default all tables are filtered and the dbVault or dtVault is modified in-place
+dtv.rbm10.t &lt;- vaultTriage(dtv.rbm10)
+## filter variants based on the default rules
+dtv.rbm10.f &lt;- vaultFilter(dtv.rbm10.t)
+</code></pre>
+<h3 id="versioning">Versioning</h3>
+<p>If it is helpful to keep track of changes to the structure of the dtVault object by versioning it. Each vault has a <code>$version</code> and only vaults with compatible versions can be stacked. The structure of a vault with a given version is stored in <code>inst/extdata/dtvault-{ver}.schema</code>.</p>
+<p>A new schema can be created with the following commands. the resulting schema file will be used to ensure the consistency of the object by some functions operating on <code>dtVault</code> objects. Here <code>dbv</code> is any vault.</p>
+<pre><code>schema &lt;- .dtVaultSchema(dtv)
+writeLines(&quot;&lt;TPO_DIR&gt;/rlibs/carat/inst/extdata/schema-{ver}.schema&quot;)
+</code></pre>
+<p>A schema is essentially a vault with no rows. It can be loaded as follows</p>
+<pre><code>dtv0 &lt;- eval(parse(&quot;&lt;TPO_DIR&gt;/rlibs/carat/inst/extdata/schema/vault-v2.schema&quot;))
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

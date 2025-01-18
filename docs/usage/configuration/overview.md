@@ -1,8 +1,6 @@
-# Overview
+Following [installation](../../../setup/local-installation), a series of steps are required to make TPO operational. These steps involve the downloading of reference files and the creation of Docker and GCP images. Some configuration is necessary to tell TPO how to perform these steps, like where to save files (references, temporary, results), which GCP project to use, and how to authorize the Sentieon tools.
 
-Following [installation](Installation), a series of steps are required to make TPO operational. These steps involve the downloading of reference files and the creation of Docker and GCP images. Some configuration is necessary to tell TPO how to perform these steps, like where to save files (references, temporary, results), which GCP project to use, and how to authorize the Sentieon tools.
-
-In addition, the computational pipelines can be fully customized and configured, how to change their settings is described later in the [Pipelines Settings](Settings) section.
+In addition, the computational pipelines can be fully customized and configured, how to change their settings is described later in the [Pipelines Settings](../../pipelines/settings) section.
 
 # TPO config files
 
@@ -49,7 +47,7 @@ An example `[TPO]` section could look as follows:
 CODE_VER = 0.0.1-rel1
 BOOT_VER = 0.0.1-rel1
 ROOT_VER = 0.0.1-rel1
-````
+```
 
 `REFS_VER` is the location on a bucket with all the reference files which will be put into ROOT_VER
 
