@@ -60,6 +60,5 @@ nav:
         - Use Cases: notes/use-cases.md
         - Variant & Feature Manual Review: notes/variant-and-feature-manual-review.md
 
+
 copyright: Michigan Center for Translational Pathology (c) 2023
-theme:
-   name: material
