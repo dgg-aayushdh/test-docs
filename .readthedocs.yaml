@@ -13,11 +13,11 @@
    # https://docs.readthedocs.io/page/guides/reproducible-builds.html
 
 
-python:
-  install:
-    - method: pip
-      packages:
-        - mkdocs-material
+ python:
+   install:
+     - method: pip
+       packages:
+         - mkdocs-material
 
  mkdocs:
    configuration: mkdocs.yml
