@@ -1,5 +1,4 @@
 site_name: TPO
-user_color_mode_toggle: true
 nav:
     - Home: index.md
     - Overview: overview.md
@@ -60,5 +59,6 @@ nav:
         - Use Cases: notes/use-cases.md
         - Variant & Feature Manual Review: notes/variant-and-feature-manual-review.md
 
-
+theme:
+    name: material
 copyright: Michigan Center for Translational Pathology (c) 2023
