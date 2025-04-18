@@ -60,5 +60,25 @@ nav:
         - Variant & Feature Manual Review: notes/variant-and-feature-manual-review.md
 
 theme:
-    name: material
+  name: material
+  features:
+    - content.code.copy
+    - content.action.edit
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+        
 copyright: Michigan Center for Translational Pathology (c) 2023
