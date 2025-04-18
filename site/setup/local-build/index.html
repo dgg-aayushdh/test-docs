@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../usage/shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -368,7 +368,7 @@ REFS = &lt;directory&gt;
 <pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini refs_pull
 </code></pre>
 <p>Depending on the internet connection this may take some time (10+ minutes). A total of 50-100GB will be downloaded.</p>
-<p>See <a href="Development#References">Development</a> for instructions on how to add custom files to the references.</p>
+<p>See <a href="../../development/architecture">Development</a> for instructions on how to add custom files to the references.</p>
 <h2 id="docker-images">Docker images</h2>
 <p>Once the reference files have been pulled it is possible to build the required Docker images.</p>
 <p>First, the <code>config.ini</code> file needs to be edited, to specify <code>BOOT_VER</code> a version number which will be used to tag the docker images e.g. <code>tpobase:$BOOT_VER</code>. The same version number will be later used to tag the GCP boot image <code>tpoboot:$BOOT_VER</code> (see below).</p>
@@ -411,8 +411,8 @@ tpoboot-&lt;$BOOT_VER&gt;                          mctp-gce                     
 </code></pre>
 <p>There are three uses for this GCP instance image:
 - building TPO references (covered next)
-- launching TPO pipelines on GCP (see: <a href="Usage">Usage</a>)
-- starting a TPO instance for debugging and development (see: <a href="Development#gcp-instance">Development</a>)</p>
+- launching TPO pipelines on GCP (see: <a href="../../usage/cli">Usage</a>)
+- starting a TPO instance for debugging and development (see: <a href="../../development/architecture#gcp-images">Development</a>)</p>
 <h2 id="building-tpo-work-disc">Building TPO work disc</h2>
 <p>Running instances require working disk space to store input, temporary, and output files. These disks are created from the <code>work</code> image, which is a formatted (ext4) GCP image that is automatically resized when an instance is launched. Having a pre-formatted empty image saves time when launching instances, as initializing and formatting large images takes a lot of time.</p>
 <pre><code>$TPO_ROOT/tpo.py -project config/my_config.ini gcp_work_build
@@ -454,6 +454,7 @@ ROOT = &lt;path&gt;
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>

@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../usage/shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -315,19 +315,34 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            
-            
+            <li class="nav-item" data-bs-level="1"><a href="#variant-and-feature-manual-review" class="nav-link">Variant and feature manual review</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#purpose" class="nav-link">Purpose:</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#variant-level-review" class="nav-link">Variant-level review</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#feature-level-review" class="nav-link">Feature-level review</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h3 id="purpose">Purpose:</h3>
+<h1 id="variant-and-feature-manual-review">Variant and feature manual review</h1>
+<h2 id="purpose">Purpose:</h2>
 <p>The purpose of this page is to introduce a reliable and reproducible means of QC'ing variants and features for metavaults. Specifically this page will outline how:
 1.  Variants can be manually examined and re-triaged following use of the default triage functions.
 2.  Samples can be classified on the feature level (i.e. SPOP-mutant, WNT-altered, etc.)</p>
 <p>The functions that the code below leverages are stored primarily in <code>/tpo/rlibs/carat/R/review.R</code> and <code>/tpo/rlibs/carat/R/triage.R</code></p>
-<h3 id="variant-level-review">Variant-level review</h3>
+<h2 id="variant-level-review">Variant-level review</h2>
 <ol>
 <li>Load and run default triaging</li>
 </ol>
@@ -394,7 +409,7 @@ TBL = fread('/save/path/stacked_variants.tsv')
 ddtmvf &lt;- dxRescueVariants(ddtmvf, TBL)
 #########
 </code></pre>
-<h3 id="feature-level-review">Feature-level review</h3>
+<h2 id="feature-level-review">Feature-level review</h2>
 <ol>
 <li>Manually review on the feature level. This is where you can review the evidence across data types with your manually reviewed variants to make feature level calls (i.e. APC-mutant, HRD-mutant).  </li>
 </ol>
@@ -417,6 +432,7 @@ write.table(g_spop, '/save/path/spop_gl.txt', row.names = F, col.names = T, quot
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>

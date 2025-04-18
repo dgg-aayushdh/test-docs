@@ -182,7 +182,7 @@
 </li>
             
 <li>
-    <a href="../../usage/shiny-apps/structural-viewer.md" class="dropdown-item">structural-viewer</a>
+    <a href="../../usage/shiny-apps/structural-viewer/" class="dropdown-item">structural-viewer</a>
 </li>
     </ul>
   </li>
@@ -314,11 +314,17 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#examples" class="nav-link">Examples</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
+<h1 id="examples">Examples</h1>
 <p>Here is a ~complete TPO run example: </p>
 <pre><code># Running DNA Tumor Alignment
 tpo.py -config mokefile-unit_test.ini  cords_align SI_30806 SI_30806 gs://tpo-refs/v2/test/fastq/SI_30806_unittest_1.fq.gz  gs://tpo-refs/v2/test/fastq/SI_30806_unittest_2.fq.gz &amp;
@@ -394,6 +400,7 @@ tpo.py -config mokefile-unit_test.ini  carat_vault SI_30806-SI_30807-SI_9706  \
 
         <footer class="col-md-12">
             <hr>
+                <p>Michigan Center for Translational Pathology (c) 2023</p>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script src="../../js/bootstrap.bundle.min.js"></script>
